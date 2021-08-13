@@ -1,0 +1,29 @@
+.section--hero {
+  min-height: 100vh;
+  padding: 17.8125rem 0;
+}
+.hero__content {
+  width: 58%;
+  display: flex;
+  margin-left: auto;
+  flex-direction: column;
+}
+.hero__content-bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: auto;
+}
+.hero__text {
+  max-width: 530px;
+  width: 100%;
+  color: $t-color-80;
+  font-size: 1.3125rem;
+  line-height: 1.6em;
+  font-weight: 400;
+  letter-spacing: $t-ls-2;
+  margin-top: 3.125rem;
+}
+.button--hero {
+  margin-top: 2.625rem;
+}

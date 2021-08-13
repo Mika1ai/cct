@@ -1,0 +1,116 @@
+.section--blog {
+  padding: 7.8125rem 0 10.625rem 0;
+}
+.blog {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.h2--blog {
+  margin-bottom: 1.25rem;
+}
+.h3--blog {
+  margin-bottom: 6.25rem;
+}
+.blog__cards {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 1.25rem;
+}
+.blog__card-wrapper {
+}
+.blog__card {
+  position: relative;
+  height: 41.5625rem;
+  display: flex;
+  align-items: flex-end;
+  border-radius: 1.25rem;
+  overflow: hidden;
+}
+.blog__card-image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  //   z-index: 1;
+}
+.blog__card-image-filter {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-image: linear-gradient(
+    180deg,
+    rgba(255, 101, 101, 0) 0%,
+    #de4e2b 100%
+  );
+  opacity: 0.4;
+  &::after {
+    content: "";
+    position: absolute;
+    width: 120%;
+    height: 120%;
+    top: -10%;
+    left: -10%;
+    filter: blur(100px);
+    background-image: url("/images/bg-gradient-image.jpg");
+    opacity: 0.5;
+    mix-blend-mode: hue;
+  }
+}
+.blog__card-category {
+  position: absolute;
+  top: 2.5rem;
+  left: 2.5rem;
+  padding: 0.625rem 1.5625rem;
+  font-size: 0.875rem;
+  line-height: 1.5em;
+  letter-spacing: $t-ls-3;
+  font-weight: 500;
+  border-radius: 2rem;
+  background-color: #ffffff;
+  z-index: 2;
+  &[data-blog-category="user-experience"] {
+    color: #4a36de;
+  }
+  &[data-blog-category="user-interface"] {
+    color: #f13071;
+  }
+}
+.blog__card-text {
+  position: relative;
+  padding: 1.875rem 2.5rem 2.5rem 2.5rem;
+  background-color: #2020201a;
+}
+.blog__card-title-block {
+}
+
+.h4--blog {
+  margin-bottom: 0.625rem;
+}
+.blog__card-time {
+  font-size: 1rem;
+  line-height: 1.6em;
+  letter-spacing: $t-ls-2;
+  color: $t-color-50;
+  font-weight: 400;
+}
+.blog__card-descr-block {
+}
+
+.blog__card-descr {
+  padding-top: 0.9375rem;
+  font-size: 1.125rem;
+  line-height: 1.6em;
+  letter-spacing: $t-ls-2;
+  color: $t-color-100;
+  font-weight: 400;
+}
+
+.button--blog {
+  margin-top: 3.125rem;
+}

@@ -1,0 +1,41 @@
+.section--about {
+  padding: 16.25rem 0 14.375rem 0;
+}
+.about {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.about__left {
+  display: flex;
+}
+.about__right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 27.1875rem;
+  margin: 0 5.625rem 0 auto;
+}
+.h2--about {
+  margin-bottom: 1.25rem;
+}
+.about__list {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 1.25rem;
+  margin: 3.125rem 0 1.875rem 0;
+}
+.about__l-item-count {
+  margin-bottom: 0.625rem;
+  font-weight: 700;
+  color: $t-color-20;
+  letter-spacing: $t-ls-2;
+  font-size: 1.3125rem;
+  line-height: 1.47em;
+}
+.about__l-item-text {
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.6em;
+  color: $t-color-100;
+  letter-spacing: $t-ls-2;
+}

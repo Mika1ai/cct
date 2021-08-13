@@ -1,0 +1,209 @@
+@import "./reset.scss";
+@import "./variables.scss";
+@import "./typography.scss";
+@import "./navbar.scss";
+@import "./hero.scss";
+@import "./wwd.scss";
+@import "./about.scss";
+@import "./portfolio.scss";
+@import "./testimonials.scss";
+@import "./blog.scss";
+@import "./quote.scss";
+@import "./footer.scss";
+
+body {
+  background-color: $bg-color;
+  line-height: 1em;
+}
+.section {
+  width: 100%;
+  position: relative;
+  z-index: 2;
+}
+.container {
+  max-width: 1380px;
+  padding: 0 40px;
+  width: 100%;
+  margin: auto;
+  position: relative;
+  z-index: 1;
+}
+//scrollbar
+::-webkit-scrollbar {
+  width: 8px;
+  background-color: $t-color-20;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 2px;
+  background-color: $t-color-60;
+}
+//button
+.button {
+  display: flex;
+  align-items: center;
+  margin-left: -1rem;
+  padding-right: 0.9375rem;
+  &:hover .button__circle {
+    box-shadow: inset 0 0 0 1px $t-color-20;
+    width: 4rem;
+    height: 4rem;
+  }
+}
+.button__arrow-block {
+  width: 4rem;
+  height: 4rem;
+  margin-right: 0.9375rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.button__circle {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  position: absolute;
+}
+.button__arrow {
+  width: 1.4375rem;
+  height: 0.875rem;
+}
+.button__text {
+  font-weight: 700;
+  color: $t-color-100;
+}
+//cursor
+.cursor {
+  position: fixed;
+  width: 4.6875rem;
+  height: 4.6875rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+  z-index: 9999;
+  transition: opacity 0.1s ease, transform 0.1s ease;
+  &.hidden {
+    opacity: 0;
+    transform: scale(0.4);
+  }
+}
+.cursor__circle {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  animation-name: cursor-circle-rotate;
+  animation-duration: 7.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+@keyframes cursor-circle-rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.cc-block {
+  cursor: none;
+}
+//
+.blur-wrapper {
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+  border-radius: 1.25rem;
+  box-shadow: inset 0 0 0 1px #ffffff33;
+  margin: 0 40px;
+  background-color: #ffffff08;
+  backdrop-filter: blur(16px);
+}
+.card__text-wrapper {
+  transition: height 0.5s ease;
+  max-height: 100%;
+  overflow: hidden;
+}
+// white->pink icon
+.w-p__icon {
+  box-shadow: inset 0 0 0 1px #ffffff;
+  border-radius: 1.125rem;
+  transition: background-color 0.3s ease;
+  path {
+    transition: fill 0.3s ease;
+  }
+}
+.w-p__p-element {
+  &:hover .w-p__icon {
+    background-color: $t-color-100;
+    path {
+      fill: #f13071;
+    }
+  }
+}
+.logo-wrapper {
+  position: fixed;
+  z-index: 1;
+  top: 10vh;
+  height: 80vh;
+  width: 100%;
+  left: 0;
+}
+.bg-gradient {
+  overflow: hidden;
+  position: relative;
+  background-color: black;
+  &::before {
+    content: "";
+    position: absolute;
+    width: 120%;
+    height: 120%;
+    top: -5%;
+    left: -5%;
+    background-size: cover;
+    filter: blur(16px);
+    background-image: url("/images/bg-gradient-main.jpg");
+  }
+}
+
+.cursor-drag {
+  display: flex;
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  transition-delay: 0.2s;
+  transition: opacity 0.1s ease, transform 0.1s ease;
+  opacity: 1;
+  &.hidden {
+    opacity: 0;
+    transform: scale(0.4);
+  }
+}
+.cursor-drag__arrow-left {
+  transform: rotate(180deg);
+  position: absolute;
+  left: -1rem;
+}
+.cursor-drag__circle {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background-color: $t-color-20;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.cursor-drag__dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background-color: $t-color-100;
+}
+.cursor-drag__arrow-right {
+  position: absolute;
+  right: -1rem;
+}

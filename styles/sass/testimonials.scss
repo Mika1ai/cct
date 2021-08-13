@@ -1,0 +1,204 @@
+.section--testimonials {
+  padding: 9.375rem 0 7.8125rem 0;
+}
+.testimonials {
+}
+.testimonials__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.h2--testimonials {
+}
+.h3--testimonials {
+  max-width: 33.125rem;
+  width: 100%;
+}
+
+.testimonials__card {
+  max-width: 19.375rem;
+  width: 100%;
+  padding: 1.875rem 1.875rem 2.5rem 1.875rem;
+  box-shadow: inset 0 0 0 1px #ffffff33;
+  border-radius: 1.25rem;
+  overflow: hidden;
+  background-image: linear-gradient(
+    150deg,
+    rgba(255, 255, 255, 0.2) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-image: linear-gradient(
+      150deg,
+      rgba(255, 255, 255, 0.2) 0%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    opacity: 0;
+  }
+  &:hover {
+    &::after {
+      opacity: 1;
+    }
+    .testimonials__card-review,
+    .testimonials__card-powered {
+      color: $t-color-100;
+    }
+  }
+}
+.testimonials__card-top {
+}
+.testimonials__card-reviewer {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.25rem;
+  position: relative;
+  z-index: 2;
+}
+.testimonials__card-photo-wrapper {
+  width: 3.375rem;
+  height: 3.375rem;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-image: linear-gradient(
+      0deg,
+      rgba(208, 156, 197, 0.7) 0%,
+      rgba(212, 104, 140, 0) 100%
+    );
+  }
+}
+.testimonials__card-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.testimonials__card-name-block {
+  margin-left: 0.9375rem;
+}
+.testimonials__card-name {
+  margin-bottom: 2px;
+  font-weight: 500;
+  color: $t-color-100;
+  font-size: 1.125rem;
+  line-height: 1.4em;
+  letter-spacing: $t-ls-2;
+}
+.testimonials__card-profession {
+  font-weight: 400;
+  color: $t-color-50;
+  font-size: 0.8125rem;
+  line-height: 1.6em;
+  letter-spacing: $t-ls-2;
+}
+.testimonials__card-review {
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.6em;
+  letter-spacing: $t-ls-2;
+  color: $t-color-50;
+  transition: color 0.3s ease;
+}
+.testimonials__card-bottom {
+  margin-top: 1.5625rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.testimonials__card-social-link {
+  cursor: none;
+  path {
+    transition: fill 0.3s ease;
+  }
+  &:hover path {
+    fill: $t-color-100;
+  }
+}
+
+.testimonials__card-powered {
+  font-size: 0.75rem;
+  line-height: 1.6em;
+  color: $t-color-50;
+  letter-spacing: $t-ls-2;
+  transition: color 0.3s ease;
+}
+////////////////////////
+.swiper-container {
+}
+.swiper-wrapper {
+}
+.swiper-slide {
+}
+.swiper-pagination {
+}
+
+.testimonials__swiper-container.swiper-container {
+  margin-top: 6.25rem;
+  position: relative;
+  overflow: visible;
+}
+
+.swiper-gradient-left {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  pointer-events: none;
+  height: 100%;
+  border-left: 1px solid hsl(0, 0%, 32%);
+  background-image: linear-gradient(
+    90deg,
+    hsl(0, 0%, 17%) 60%,
+    transparent 100%
+  );
+}
+.swiper-gradient-right {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  pointer-events: none;
+  height: 100%;
+  border-right: 1px solid hsl(0, 0%, 32%);
+  background-image: linear-gradient(
+    270deg,
+    hsl(0, 0%, 17%) 60%,
+    transparent 100%
+  );
+}
+.testimonials__swiper-wrapper {
+  position: relative;
+  z-index: 1;
+}
+.testimonials__swiper-slide {
+}
+.testimonials__swiper-pagination.swiper-pagination {
+  position: static;
+  margin-top: 4.0625rem;
+}
+.testimonials__swiper-bullet {
+  display: inline-block;
+  margin: 0 0.6875rem;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background-color: #2f2f2f;
+  cursor: pointer;
+  &.testimonials__swiper-bullet--active {
+    background-color: #a1a1a1;
+  }
+}
