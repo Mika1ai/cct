@@ -606,8 +606,8 @@ h1 {
 @media screen and (max-width: 992px) {
   .about__left {
     grid-row-start: 2;
-    padding: 30vmin 0;
-    height: 120vmin;
+    padding: 10vmin 0;
+    height: 100vmin;
   }
 }
 
@@ -626,18 +626,26 @@ h1 {
   color: white;
   letter-spacing: -0.04em;
   font-weight: 700;
-  background-color: violet;
-  margin: 0 6rem 0 auto;
+  background-image: linear-gradient(120deg, red, blue);
+  margin: 0 8rem 0 auto;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+@media screen and (max-width: 1280px) {
+  .about__button {
+    margin: 0 6rem 0 auto;
+  }
 }
 @media screen and (max-width: 992px) {
   .about__button {
     grid-row-start: 2;
-    margin: 0 6rem 0 30vmin;
+    margin: 0 auto 0 30vmin;
   }
 }
 @media screen and (max-width: 480px) {
   .about__button {
-    margin: 0 6rem 0 42vmin;
+    margin: 0 auto 0 42vmin;
     width: 40vmin;
     height: 40vmin;
     top: 45vmin;
@@ -910,7 +918,7 @@ h1 {
     width: 100%;
   }
 }
-@media screen and (max-width: 1280px) {
+@media screen and (max-width: 767px) {
   .h3--portfolio {
     text-align: center;
   }
@@ -964,6 +972,9 @@ h1 {
 @media screen and (max-width: 767px) {
   .portfolio__swiper-container {
     display: block;
+    max-width: calc(100% + 10px);
+    overflow: hidden;
+    margin-right: -10px;
   }
 }
 
@@ -1981,8 +1992,7 @@ body {
   top: -5%;
   left: -5%;
   background-size: cover;
-  filter: blur(16px);
-  background-image: url("../../images/bg-gradient-main.jpg");
+  background-image: linear-gradient(0deg, rgba(0, 238, 255, 0.8) 0%, rgba(255, 0, 0, 0) 100%), linear-gradient(120deg, rgba(255, 0, 255, 0.8) 0%, rgba(0, 255, 0, 0) 100%), linear-gradient(240deg, rgba(174, 0, 255, 0.8) 0%, rgba(0, 0, 255, 0) 100%);
 }
 
 .cursor-drag {

@@ -19,13 +19,6 @@
   display: grid !important;
   grid-template-columns: 1fr 1fr;
   gap: 1.25rem;
-  // @media screen and (max-width: $lg) {
-  //   display: flex !important;
-  // }
-  // @media screen and (max-width: $md) {
-  //   gap: 0;
-  //   display: flex !important;
-  // }
   @media screen and (max-width: $sm) {
     gap: 0;
     display: flex !important;
@@ -203,7 +196,7 @@
     max-width: 21.1rem;
     width: 100%;
   }
-  @media screen and (max-width: $lg) {
+  @media screen and (max-width: $sm) {
     text-align: center;
   }
 }
@@ -244,6 +237,9 @@
   grid-row-end: 3;
   @media screen and (max-width: $sm) {
     display: block;
+    max-width: calc(100% + 10px);
+    overflow: hidden;
+    margin-right: -10px;
   }
 }
 .portfolio__cards.swiper-wrapper {

@@ -18,8 +18,8 @@
   display: flex;
   @media screen and (max-width: $md) {
     grid-row-start: 2;
-    padding: 30vmin 0;
-    height: 120vmin;
+    padding: 10vmin 0;
+    height: 100vmin;
   }
 }
 .about__button {
@@ -37,14 +37,20 @@
   color: $t-color-100;
   letter-spacing: $t-ls-4;
   font-weight: 700;
-  background-color: violet;
-  margin: 0 6rem 0 auto;
+  background-image: linear-gradient(120deg, red, blue);
+  margin: 0 8rem 0 auto;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  @media screen and (max-width: $lg) {
+    margin: 0 6rem 0 auto;
+  }
   @media screen and (max-width: $md) {
     grid-row-start: 2;
-    margin: 0 6rem 0 30vmin;
+    margin: 0 auto 0 30vmin;
   }
   @media screen and (max-width: $xs) {
-    margin: 0 6rem 0 42vmin;
+    margin: 0 auto 0 42vmin;
     width: 40vmin;
     height: 40vmin;
     top: 45vmin;

@@ -53,8 +53,6 @@
     margin-bottom: 1.25rem;
   }
 }
-.quote__link {
-}
 .quote__link-text {
   font-weight: 400;
   font-size: 1.125rem;
@@ -159,8 +157,6 @@
   &::-webkit-scrollbar-thumb {
     border-radius: 2px;
   }
-}
-.button--quote {
 }
 .quote .container {
   @media screen and (max-width: $sm) {
