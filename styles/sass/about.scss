@@ -1,12 +1,54 @@
 .section--about {
   padding: 16.25rem 0 14.375rem 0;
+  @media screen and (max-width: $sm) {
+    padding: 3.75rem 0 5rem 0;
+  }
 }
 .about {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 80vmin 1fr;
+  @media screen and (max-width: $lg) {
+    grid-template-columns: 70vmin 1fr;
+  }
+  @media screen and (max-width: $md) {
+    grid-template-columns: 1fr;
+  }
 }
 .about__left {
   display: flex;
+  @media screen and (max-width: $md) {
+    grid-row-start: 2;
+    padding: 30vmin 0;
+    height: 120vmin;
+  }
+}
+.about__button {
+  top: 35vmin;
+  position: sticky;
+  width: 30vmin;
+  height: 30vmin;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 1.5rem;
+  line-height: 1.3em;
+  color: $t-color-100;
+  letter-spacing: $t-ls-4;
+  font-weight: 700;
+  background-color: violet;
+  margin: 0 6rem 0 auto;
+  @media screen and (max-width: $md) {
+    grid-row-start: 2;
+    margin: 0 6rem 0 30vmin;
+  }
+  @media screen and (max-width: $xs) {
+    margin: 0 6rem 0 42vmin;
+    width: 40vmin;
+    height: 40vmin;
+    top: 45vmin;
+  }
 }
 .about__right {
   display: flex;
@@ -14,6 +56,16 @@
   align-items: flex-start;
   max-width: 27.1875rem;
   margin: 0 5.625rem 0 auto;
+  @media screen and (max-width: $xl) {
+    margin: 0 0 0 auto;
+  }
+  @media screen and (max-width: $lg) {
+    // max-width: 18rem;
+  }
+  @media screen and (max-width: $md) {
+    margin: 0;
+    max-width: unset;
+  }
 }
 .h2--about {
   margin-bottom: 1.25rem;

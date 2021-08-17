@@ -1,34 +1,25 @@
 .section--quote {
   padding: 2.5rem 0;
-  &::before {
-    content: "";
-    position: absolute;
-    width: 100vw;
-    height: 40px;
-    top: 0px;
-    left: -40px;
-    background-image: linear-gradient(0deg, $bg-color 0%, transparent 100%);
-  }
-  &::after {
-    content: "";
-    position: absolute;
-    width: 100vw;
-    height: 40px;
-    bottom: 0px;
-    left: -40px;
-    background-image: linear-gradient(180deg, $bg-color 0%, transparent 100%);
-  }
 }
 .quote {
+  box-shadow: 0 0 1.25rem 1.25rem $bg-color;
   margin: 0 2.5rem;
   padding: 12.5rem 0;
   border-radius: 1.25rem;
   background-color: blueviolet;
+  @media screen and (max-width: $sm) {
+    padding: 2.5rem 0 3.125rem 0;
+    margin: 0 0.625rem;
+  }
 }
 .quote__content {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  @media screen and (max-width: $sm) {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 .quote__left {
   max-width: 34rem;
@@ -36,14 +27,31 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  @media screen and (max-width: $sm) {
+    align-items: center;
+  }
 }
 .h2--quote {
   margin-bottom: 3.125rem;
+  @media screen and (max-width: $sm) {
+    margin-bottom: 1.25rem;
+  }
 }
 .h3--quote {
   font-size: 5.3125rem;
   margin-bottom: 1.875rem;
   font-weight: 800;
+  @media screen and (max-width: $xl) {
+    font-size: 4.5rem;
+  }
+  @media screen and (max-width: $lg) {
+    font-size: 3.5rem;
+  }
+  @media screen and (max-width: $sm) {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 1.25rem;
+  }
 }
 .quote__link {
 }
@@ -65,9 +73,12 @@
   }
 }
 .quote__right {
-  margin-top: 3.75rem;
+  margin: 3.75rem 0 0 2rem;
   max-width: 33.125rem;
   width: 100%;
+  @media screen and (max-width: $sm) {
+    margin: 3.125rem 0 0 0;
+  }
 }
 .quote__form {
   max-width: 33.125rem;
@@ -89,6 +100,9 @@
   letter-spacing: $t-ls-2;
   text-transform: capitalize;
   margin-bottom: 1.25rem;
+  @media screen and (max-width: $sm) {
+    font-size: 1.5rem;
+  }
 }
 .quote__form-label {
   width: 100%;
@@ -132,6 +146,9 @@
   &::placeholder {
     color: $t-color-50;
   }
+  @media screen and (max-width: $sm) {
+    font-size: 0.875rem;
+  }
 }
 .quote__form-textarea {
   height: 1.4em;
@@ -144,4 +161,9 @@
   }
 }
 .button--quote {
+}
+.quote .container {
+  @media screen and (max-width: $sm) {
+    padding: 0 1.25rem;
+  }
 }

@@ -1,18 +1,27 @@
 .section--hero {
-  min-height: 100vh;
+  // min-height: 100vh;
   padding: 17.8125rem 0;
+  @media screen and (max-width: $sm) {
+    padding: 21rem 0 2.5rem 0;
+  }
 }
 .hero__content {
   width: 58%;
   display: flex;
   margin-left: auto;
   flex-direction: column;
+  @media screen and (max-width: $md) {
+    width: 100%;
+  }
 }
 .hero__content-bottom {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   margin-left: auto;
+  @media screen and (max-width: $sm) {
+    margin: 0;
+  }
 }
 .hero__text {
   max-width: 530px;
@@ -23,7 +32,15 @@
   font-weight: 400;
   letter-spacing: $t-ls-2;
   margin-top: 3.125rem;
+  @media screen and (max-width: $sm) {
+    max-width: unset;
+    margin-top: 2.5rem;
+    font-size: 1.125rem;
+  }
 }
 .button--hero {
   margin-top: 2.625rem;
+  @media screen and (max-width: $sm) {
+    margin-top: 0.75rem;
+  }
 }

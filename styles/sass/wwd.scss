@@ -1,35 +1,73 @@
 .section--wwd {
-  padding: 1.5625rem 0;
-  &::before {
-    content: "";
-    position: absolute;
-    width: 100vw;
-    height: 40px;
-    top: -15px;
-    left: -40px;
-    background-image: linear-gradient(0deg, $bg-color 0%, transparent 100%);
-  }
-  &::after {
-    content: "";
-    position: absolute;
-    width: 100vw;
-    height: 40px;
-    bottom: -15px;
-    left: -40px;
-    background-image: linear-gradient(180deg, $bg-color 0%, transparent 100%);
+  padding: 2.5rem 0;
+  overflow: hidden;
+  @media screen and (max-width: $md) {
+    overflow: hidden;
+    padding: 0;
   }
 }
 .wwd {
-  margin: 0 2.5rem;
+  box-shadow: 0 0 1.25rem 1.25rem $bg-color;
   padding: 7.5rem 0 9.375rem 0;
   border-radius: 1.25rem;
+  margin: 0 2.5rem;
   overflow: hidden;
   position: relative;
+  @media screen and (max-width: $md) {
+    width: max-content;
+    display: inline-block;
+  }
+  @media screen and (max-width: $sm) {
+    padding: 2.5rem 0 3.125rem 0;
+    margin: 0 0.625rem;
+  }
 }
-
+.wwd .container {
+  @media screen and (max-width: $sm) {
+    padding: 0 20px;
+  }
+}
+.wwd__content-wrapper {
+  @media screen and (max-width: $md) {
+    overflow: auto;
+    padding: 2.5rem 0;
+    width: 100%;
+  }
+}
 .wwd__content {
   display: flex;
   flex-direction: column;
+}
+.wwd__content-top-wrapper {
+  @media screen and (max-width: $md) {
+    width: 100%;
+  }
+}
+.wwd__content-top--mobile {
+  display: none;
+  pointer-events: none;
+  @media screen and (max-width: $md) {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    left: 5rem;
+    top: 10rem;
+    width: calc(100vw - 10rem);
+    position: absolute;
+    z-index: 3;
+  }
+  @media screen and (max-width: $sm) {
+    flex-direction: column;
+    align-items: center;
+    height: 7.8125rem;
+    top: 5rem;
+    left: 0;
+    width: 100vw;
+    .h3 {
+      max-width: 15rem;
+      text-align: center;
+    }
+  }
 }
 .wwd__content-top {
   display: flex;
@@ -38,11 +76,34 @@
   justify-content: space-between;
   align-items: flex-end;
   margin-bottom: 6.25rem;
+  @media screen and (max-width: $xl) {
+    padding-right: 4rem;
+  }
+  @media screen and (max-width: $lg) {
+    padding-right: 0;
+    margin-bottom: 2.5rem;
+  }
+  @media screen and (max-width: $md) {
+    opacity: 0;
+    pointer-events: none;
+  }
+  @media screen and (max-width: $sm) {
+    flex-direction: column;
+    height: 7.8125rem;
+    max-width: 15rem;
+    // opacity: 1;
+  }
 }
 .wwd__cards {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 1.25rem;
+  @media screen and (max-width: $lg) {
+    grid-template-columns: 1fr;
+  }
+  @media screen and (max-width: $md) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
 .wwd__card {
   border-radius: 1.1875rem;
@@ -75,6 +136,9 @@
       color: $t-color-100;
     }
   }
+  @media screen and (max-width: $sm) {
+    padding: 1.875rem;
+  }
 }
 .wwd__card-top {
   display: flex;
@@ -84,6 +148,9 @@
 
 .wwd__card-icon {
   margin-bottom: 4.0625rem;
+  @media screen and (max-width: $sm) {
+    margin-bottom: 1.875rem;
+  }
 }
 .h4--wwd {
   margin-bottom: 1.25rem;
@@ -93,6 +160,9 @@
   line-height: 1.6em;
   letter-spacing: $t-ls-1;
   color: $t-color-90;
+  @media screen and (max-width: $sm) {
+    margin-bottom: 1rem;
+  }
 }
 .wwd__card-count {
   margin-top: 2.1875rem;

@@ -27,11 +27,17 @@ body {
   margin: auto;
   position: relative;
   z-index: 1;
+  @media screen and (max-width: $sm) {
+    padding: 0 10px;
+  }
 }
 //scrollbar
 ::-webkit-scrollbar {
   width: 8px;
   background-color: $t-color-20;
+  @media screen and (max-width: $md) {
+    display: none;
+  }
 }
 ::-webkit-scrollbar-thumb {
   border-radius: 2px;
@@ -109,7 +115,9 @@ body {
   }
 }
 .cc-block {
-  cursor: none;
+  @media screen and (min-width: $md) {
+    cursor: none;
+  }
 }
 //
 .blur-wrapper {
@@ -121,11 +129,22 @@ body {
   margin: 0 40px;
   background-color: #ffffff08;
   backdrop-filter: blur(16px);
+  @media screen and (max-width: $sm) {
+    margin: 0;
+    border-radius: 0;
+    box-shadow: none;
+    border-top: 1px solid #ffffff33;
+    border-bottom: 1px solid #ffffff33;
+  }
+}
+.card {
+  overflow: hidden;
 }
 .card__text-wrapper {
-  transition: height 0.5s ease;
+  transition: height 0.5s ease, opacity 0.5s ease;
   max-height: 100%;
-  overflow: hidden;
+  opacity: 0;
+  // overflow: hidden;
 }
 // white->pink icon
 .w-p__icon {
@@ -147,10 +166,24 @@ body {
 .logo-wrapper {
   position: fixed;
   z-index: 1;
-  top: 10vh;
-  height: 80vh;
+  top: 10vmin;
+  height: 80vmin;
   width: 100%;
   left: 0;
+  @media screen and (max-width: $lg) {
+    top: 15vmin;
+    height: 70vmin;
+  }
+  @media screen and (max-width: $xs) {
+    height: 100vmin;
+  }
+}
+.logo-wrapper .container {
+  height: 100%;
+}
+.logo {
+  object-fit: contain;
+  height: 100%;
 }
 .bg-gradient {
   overflow: hidden;
@@ -165,7 +198,7 @@ body {
     left: -5%;
     background-size: cover;
     filter: blur(16px);
-    background-image: url("./images/bg-gradient-main.jpg");
+    background-image: url("../../images/bg-gradient-main.jpg");
   }
 }
 
