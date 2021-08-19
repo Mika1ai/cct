@@ -7,9 +7,9 @@
   box-shadow: inset 0 0 0 1px #ffffff33;
   background-color: #ffffff08;
   backdrop-filter: blur(16px);
-
   @media screen and (max-width: $sm) {
     margin: 0 0.625rem 0.625rem 0.625rem;
+    padding: 1.875rem 0 3.125rem 0;
   }
 }
 .footer__content {
@@ -96,6 +96,9 @@
   line-height: 1.6em;
   color: $t-color-100;
   letter-spacing: $t-ls-2;
+  @media screen and (max-width: $md) {
+    text-align: right;
+  }
 }
 .footer__contacts-link {
   font-weight: 400;
@@ -127,6 +130,7 @@
   letter-spacing: $t-ls-2;
   @media screen and (max-width: $sm) {
     grid-row-start: 4;
+    white-space: normal;
   }
 }
 .footer__social-links {

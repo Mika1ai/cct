@@ -10,7 +10,8 @@ for (let i = 0; i < cardText.length; i++) {
   cardTextHeight.push(cardText[i].scrollHeight);
   cardTextWrapper[i].style.height = `0px`;
 }
-if (window.innerWidth > 767) {
+
+if (window.innerWidth > 1050) {
   for (let i = 0; i < card.length; i++) {
     card[i].addEventListener("mouseenter", () => {
       cardTextWrapper[i].style.height = `${cardTextHeight[i]}px`;
@@ -20,5 +21,10 @@ if (window.innerWidth > 767) {
       cardTextWrapper[i].style.height = `0px`;
       cardTextWrapper[i].style.opacity = "0";
     });
+  }
+} else {
+  for (let i = 0; i < card.length; i++) {
+    cardTextWrapper[i].style.height = `${cardTextHeight[i]}px`;
+    cardTextWrapper[i].style.opacity = "1";
   }
 }

@@ -16,6 +16,7 @@
   @media screen and (max-width: $md) {
     width: max-content;
     display: inline-block;
+    padding: 4.7rem 0 4.7rem 0;
   }
   @media screen and (max-width: $sm) {
     padding: 2.5rem 0 3.125rem 0;
@@ -51,12 +52,12 @@
     justify-content: space-between;
     align-items: flex-end;
     left: 5rem;
-    top: 10rem;
+    top: 7rem;
     width: calc(100vw - 10rem);
     position: absolute;
     z-index: 3;
   }
-  @media screen and (max-width: $sm) {
+  @media screen and (max-width: 768px) {
     flex-direction: column;
     align-items: center;
     height: 7.8125rem;
@@ -91,7 +92,6 @@
     flex-direction: column;
     height: 7.8125rem;
     max-width: 15rem;
-    // opacity: 1;
   }
 }
 .wwd__cards {
@@ -113,7 +113,7 @@
   justify-content: space-between;
   background-image: linear-gradient(205deg, $t-color-20 0%, transparent 100%);
   backdrop-filter: blur(2.625rem);
-  padding: 2.5rem 2.5rem 2.5rem 1.875rem;
+  padding: 2.5rem;
   position: relative;
   overflow: hidden;
   &::after {
@@ -138,6 +138,7 @@
   }
   @media screen and (max-width: $sm) {
     padding: 1.875rem;
+    max-width: 80vw;
   }
 }
 .wwd__card-top {

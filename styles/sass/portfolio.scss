@@ -1,6 +1,6 @@
 .section--portfolio {
   padding: 7.5rem 0 9.375rem 0;
-  @media screen and (max-width: $sm) {
+  @media screen and (max-width: $md) {
     padding: 3.125rem 0;
   }
 }
@@ -47,10 +47,10 @@
     opacity: 0.8;
   }
   @media screen and (max-width: $sm) {
-    max-width: 19.375rem;
-    .swiper-slide {
-      max-width: 19.375rem;
-    }
+    max-width: 19rem;
+  }
+  @media screen and (max-width: $xs) {
+    max-width: 80vw;
   }
   &--your {
     position: relative;
@@ -111,11 +111,8 @@
     height: 100%;
     top: 0;
     left: 0;
-    background: linear-gradient(
-      35deg,
-      rgba(255, 255, 255, 0.3) 0%,
-      rgba(0, 0, 0, 0) 100%
-    );
+    border-radius: 0.625rem;
+    backdrop-filter: blur(0.5rem);
   }
 }
 .portfolio__card-title {
@@ -153,6 +150,12 @@
     grid-row-end: 1;
     max-width: unset;
   }
+  @media screen and (max-width: $sm) {
+    padding: 0 10px;
+    width: 100vw;
+    position: relative;
+    left: -10px;
+  }
 }
 .portfolio__bottom {
   display: flex;
@@ -167,6 +170,9 @@
   @media screen and (max-width: $sm) {
     flex-direction: column;
     margin-top: 1.5rem;
+    width: 100vw;
+    position: relative;
+    left: -10px;
   }
 }
 .portfolio__title-block {
@@ -175,7 +181,7 @@
     display: flex;
     justify-content: space-between;
   }
-  @media screen and (max-width: $sm) {
+  @media screen and (max-width: $lg) {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -185,9 +191,6 @@
 .h2--portfolio {
   margin-bottom: 3.125rem;
   @media screen and (max-width: $lg) {
-    margin: 0;
-  }
-  @media screen and (max-width: $sm) {
     margin-bottom: 1.25rem;
   }
 }
@@ -196,7 +199,7 @@
     max-width: 21.1rem;
     width: 100%;
   }
-  @media screen and (max-width: $sm) {
+  @media screen and (max-width: $lg) {
     text-align: center;
   }
 }
@@ -208,10 +211,10 @@
   margin: 1.25rem 0;
   @media screen and (max-width: $lg) {
     margin: 1.25rem 0 2.5rem 0;
+    text-align: center;
   }
   @media screen and (max-width: $sm) {
     font-size: 0.875rem;
-    text-align: center;
   }
 }
 .portfolio__social-links {
@@ -236,15 +239,17 @@
   grid-row-start: 1;
   grid-row-end: 3;
   @media screen and (max-width: $sm) {
+    position: relative;
+    left: -10px;
     display: block;
-    max-width: calc(100% + 10px);
-    overflow: hidden;
-    margin-right: -10px;
+    width: calc(100vw - 20px);
+    // margin-right: -10px;
   }
 }
 .portfolio__cards.swiper-wrapper {
   @media screen and (max-width: $sm) {
     height: unset;
+    padding-left: 10px;
   }
 }
 
@@ -254,6 +259,7 @@
     display: block;
     position: relative !important;
     bottom: 0 !important;
+    left: 10px !important;
     margin-top: 2.1875rem;
     pointer-events: none;
   }

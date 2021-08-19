@@ -1,6 +1,6 @@
 .section--blog {
-  padding: 7.8125rem 0 10.625rem 0;
-  @media screen and (max-width: $sm) {
+  padding: 9.7rem 0 10.625rem 0;
+  @media screen and (max-width: $md) {
     padding: 4.6875rem 0 2.8125rem 0;
   }
 }
@@ -14,7 +14,7 @@
 }
 .h3--blog {
   margin-bottom: 6.25rem;
-  @media screen and (max-width: $sm) {
+  @media screen and (max-width: $md) {
     margin-bottom: 3.125rem;
   }
 }
@@ -91,14 +91,26 @@
   &[data-blog-category="user-interface"] {
     color: #f13071;
   }
+  @media screen and (max-width: $sm) {
+    top: 1.25rem;
+    left: 1.25rem;
+    padding: 0.5rem 1.125rem;
+    font-size: 0.75rem;
+  }
 }
 .blog__card-text {
   position: relative;
   padding: 1.875rem 2.5rem 1.5625rem 2.5rem;
   background-color: #2020201a;
+  @media screen and (max-width: $sm) {
+    padding: 1.25rem;
+  }
 }
 .blog__card-title-block {
   padding-bottom: 0.9375rem;
+  @media screen and (max-width: $sm) {
+    padding-bottom: 0;
+  }
 }
 
 .h4--blog {

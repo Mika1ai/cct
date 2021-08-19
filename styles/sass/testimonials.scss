@@ -1,6 +1,6 @@
 .section--testimonials {
   padding: 9.375rem 0 10.9375rem 0;
-  @media screen and (max-width: $sm) {
+  @media screen and (max-width: $md) {
     padding: 3.125rem 0 4.6875rem 0;
   }
 }
@@ -9,13 +9,15 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  @media screen and (max-width: $sm) {
+  @media screen and (max-width: $md) {
     flex-direction: column;
     align-items: center;
   }
 }
 .h2--testimonials {
-  @media screen and (max-width: $sm) {
+  margin-top: 1rem;
+  @media screen and (max-width: $md) {
+    margin-top: 0;
     margin-bottom: 1.25rem;
   }
 }
@@ -24,7 +26,7 @@
   @media screen and (max-width: $xl) {
     padding-right: 0;
   }
-  @media screen and (max-width: $sm) {
+  @media screen and (max-width: $md) {
     text-align: center;
   }
 }
@@ -127,7 +129,7 @@
 .testimonials__card-review {
   font-weight: 400;
   font-size: 1rem;
-  line-height: 1.6em;
+  line-height: 1.65em;
   letter-spacing: $t-ls-2;
   color: $t-color-50;
   transition: color 0.3s ease;
@@ -160,7 +162,7 @@
   margin-top: 6.25rem;
   position: relative;
   overflow: visible;
-  @media screen and (max-width: $sm) {
+  @media screen and (max-width: $md) {
     margin-top: 3.125rem;
   }
 }
@@ -208,10 +210,10 @@
   max-width: 19.375rem;
 }
 .testimonials__swiper-pagination {
-  bottom: -4.375rem !important;
+  bottom: -5.1rem !important;
   pointer-events: none;
   @media screen and (max-width: $sm) {
-    bottom: -2.5rem !important;
+    bottom: -3rem !important;
   }
 }
 .testimonials__swiper-bullet {

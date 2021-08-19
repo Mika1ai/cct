@@ -1,5 +1,5 @@
 "use strict";
-if (window.innerWidth > 992) {
+if (window.innerWidth > 1050) {
   let cursorType = "default";
 
   const cursor = document.querySelector(".cursor");

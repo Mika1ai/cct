@@ -170,14 +170,52 @@ body {
   height: 80vmin;
   width: 100%;
   left: 0;
+  opacity: 1;
+
   @media screen and (max-width: $lg) {
     top: 15vmin;
     height: 70vmin;
   }
+  @media screen and (max-width: $md) {
+    height: 70vmin;
+    top: 15vmin;
+    .logo {
+      margin: auto;
+    }
+    // left: 15vmin;
+  }
   @media screen and (max-width: $xs) {
     height: 100vmin;
+    top: 35vmin;
+  }
+  &--second {
+    display: none;
+    height: 70vmin;
+    top: 15vmin;
+    position: absolute;
+    top: 0;
+    left: -40px;
+    height: 100vh;
+    width: 100vw;
+    @media screen and (max-width: $md) {
+      display: inline-block;
+    }
+    @media screen and (max-width: $sm) {
+      left: -10px;
+    }
+    .logo {
+      position: sticky;
+      height: 70vmin;
+      top: 15vmin;
+      margin: auto;
+      @media screen and (max-width: $xs) {
+        height: 100vmin;
+        top: 35vmin;
+      }
+    }
   }
 }
+.logo-wrapper--second .container,
 .logo-wrapper .container {
   height: 100%;
 }
@@ -186,33 +224,13 @@ body {
   height: 100%;
 }
 .bg-gradient {
-  overflow: hidden;
-  position: relative;
-  background-color: black;
-  &::before {
-    content: "";
-    position: absolute;
-    width: 120%;
-    height: 120%;
-    top: -5%;
-    left: -5%;
-    background-size: cover;
-    background-image: linear-gradient(
-        0deg,
-        rgba(0, 238, 255, 0.8) 0%,
-        rgba(255, 0, 0, 0) 100%
-      ),
-      linear-gradient(
-        120deg,
-        rgba(255, 0, 255, 0.8) 0%,
-        rgba(0, 255, 0, 0) 100%
-      ),
-      linear-gradient(
-        240deg,
-        rgba(174, 0, 255, 0.8) 0%,
-        rgba(0, 0, 255, 0) 100%
-      );
-  }
+  z-index: -1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: hsl(222, 25%, 20%);
 }
 
 .cursor-drag {
