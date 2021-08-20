@@ -230,7 +230,7 @@ body {
   left: 0;
   background-size: 100% 100%;
   background-repeat: no-repeat;
-  background-image: url("./images/bg-gradient.jpg");
+  background-image: url("../images/bg-gradient.jpg");
 
   animation-name: bg-gradient-move;
   animation-duration: 15s;
@@ -245,7 +245,7 @@ body {
     right: -100%;
     background-size: 100% 100%;
     background-repeat: no-repeat;
-    background-image: url("./images/bg-gradient.jpg");
+    background-image: url("../images/bg-gradient.jpg");
   }
 }
 
