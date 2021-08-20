@@ -213,7 +213,7 @@
   bottom: -5.1rem !important;
   pointer-events: none;
   @media screen and (max-width: $sm) {
-    bottom: -3rem !important;
+    bottom: -4.5rem !important;
   }
 }
 .testimonials__swiper-bullet {
@@ -226,5 +226,12 @@
   cursor: pointer;
   &.testimonials__swiper-bullet--active {
     background-color: #a1a1a1;
+  }
+  @media screen and (max-width: $sm) {
+    width: 0.75rem;
+    height: 0.75rem;
+  }
+  @media screen and (max-width: $xs) {
+    margin: 0 0.6875rem 0.6875rem 0.6875rem;
   }
 }

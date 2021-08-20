@@ -50,7 +50,7 @@
     max-width: 19rem;
   }
   @media screen and (max-width: $xs) {
-    max-width: 80vw;
+    max-width: 82vw;
   }
   &--your {
     position: relative;
@@ -215,6 +215,7 @@
   }
   @media screen and (max-width: $sm) {
     font-size: 0.875rem;
+    margin: 1.25rem 0 3.1rem 0;
   }
 }
 .portfolio__social-links {
@@ -268,8 +269,8 @@
   @media screen and (max-width: $sm) {
     display: inline-block;
     margin: 0 0.6875rem;
-    width: 0.5rem;
-    height: 0.5rem;
+    width: 0.75rem;
+    height: 0.75rem;
     border-radius: 50%;
     background-color: #2f2f2f;
     cursor: pointer;

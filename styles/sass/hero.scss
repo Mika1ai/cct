@@ -4,7 +4,7 @@
     padding: 21rem 0 2.5rem 0;
   }
   @media screen and (max-width: $sm) {
-    padding: 21rem 0 2.5rem 0;
+    padding: 21.8rem 0 2.5rem 0;
   }
 }
 .hero__content {
@@ -38,6 +38,7 @@
     max-width: unset;
     margin-top: 2.5rem;
     font-size: 1.125rem;
+    line-height: 1.65em;
   }
 }
 .button--hero {

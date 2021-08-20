@@ -30,6 +30,7 @@
   width: 100%;
   @media screen and (max-width: $xs) {
     grid-template-columns: auto auto;
+    row-gap: 2.3rem;
   }
 }
 .footer__nav-link-wrapper {
@@ -99,6 +100,9 @@
   @media screen and (max-width: $md) {
     text-align: right;
   }
+  @media screen and (max-width: $sm) {
+    font-size: 0.875rem;
+  }
 }
 .footer__contacts-link {
   font-weight: 400;
@@ -131,6 +135,8 @@
   @media screen and (max-width: $sm) {
     grid-row-start: 4;
     white-space: normal;
+
+    font-size: 0.875rem;
   }
 }
 .footer__social-links {
@@ -158,6 +164,9 @@
     left: 0;
     background-color: $t-color-100;
     transition: width 0.5s ease;
+  }
+  @media screen and (max-width: $sm) {
+    font-size: 0.875rem;
   }
 }
 

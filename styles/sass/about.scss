@@ -65,7 +65,6 @@
     margin: 0 auto 0 42vmin;
     width: 40vmin;
     height: 40vmin;
-    top: 65vmin;
   }
 }
 .about__right {
@@ -93,6 +92,10 @@
   grid-template-columns: 1fr;
   row-gap: 1.25rem;
   margin: 3.125rem 0 1.875rem 0;
+  @media screen and (max-width: $sm) {
+    margin: 2.125rem 0 1.6rem 0;
+    row-gap: 1.4rem;
+  }
 }
 .about__l-item-count {
   margin-bottom: 0.93rem;
@@ -101,6 +104,9 @@
   letter-spacing: $t-ls-2;
   font-size: 1.3125rem;
   line-height: 1.47em;
+  @media screen and (max-width: $sm) {
+    margin-bottom: 0.625rem;
+  }
 }
 .about__l-item-text {
   font-weight: 400;
@@ -108,6 +114,9 @@
   line-height: 1.6em;
   color: $t-color-100;
   letter-spacing: $t-ls-2;
+  @media screen and (max-width: $sm) {
+    font-size: 0.875rem;
+  }
 }
 
 .ellipse {

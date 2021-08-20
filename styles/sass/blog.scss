@@ -1,7 +1,7 @@
 .section--blog {
   padding: 9.7rem 0 10.625rem 0;
   @media screen and (max-width: $md) {
-    padding: 4.6875rem 0 2.8125rem 0;
+    padding: 5rem 0 2.8125rem 0;
   }
 }
 .blog {
@@ -37,6 +37,9 @@
   overflow: hidden;
   @media screen and (max-width: $lg) {
     height: 30rem;
+  }
+  @media screen and (max-width: $xs) {
+    height: 27.5rem;
   }
 }
 .blog__card-image {
@@ -131,6 +134,10 @@
   letter-spacing: $t-ls-2;
   color: $t-color-100;
   font-weight: 400;
+  @media screen and (max-width: $sm) {
+    font-size: 1rem;
+    line-height: 1.65em;
+  }
 }
 
 .button--blog {

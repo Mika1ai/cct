@@ -1,12 +1,16 @@
 .section--quote {
   padding: 2.5rem 0;
+  @media screen and (max-width: $sm) {
+    padding: 6.2rem 0 2.5rem 0;
+  }
 }
 .quote {
   box-shadow: 0 0 1.25rem 1.25rem $bg-color;
   margin: 0 2.5rem;
   padding: 12.5rem 0;
   border-radius: 1.25rem;
-  background-color: blueviolet;
+  overflow: hidden;
+  position: relative;
   @media screen and (max-width: $md) {
     padding: 2.5rem 0 3.125rem 0;
   }
@@ -58,7 +62,7 @@
   }
   @media screen and (max-width: $sm) {
     font-size: 2.5rem;
-    margin-bottom: 1.25rem;
+    margin-bottom: 1.75rem;
   }
 }
 .quote__link-text {
@@ -144,6 +148,10 @@
   &:hover::after,
   &:focus-within::after {
     width: 100%;
+  }
+  @media screen and (max-width: $sm) {
+    padding: 0 0 0.6rem 0;
+    margin-bottom: 1.9rem;
   }
 }
 .quote__form-input,

@@ -115,9 +115,7 @@ body {
   }
 }
 .cc-block {
-  @media screen and (min-width: $md) {
-    cursor: none;
-  }
+  cursor: none;
 }
 //
 .blur-wrapper {
@@ -226,11 +224,38 @@ body {
 .bg-gradient {
   z-index: -1;
   position: absolute;
-  width: 100%;
+  width: 600%;
   height: 100%;
   top: 0;
   left: 0;
-  background-color: hsl(222, 25%, 20%);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-image: url("../../images/bg-gradient.jpg");
+
+  animation-name: bg-gradient-move;
+  animation-duration: 15s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: -100%;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-image: url("../../images/bg-gradient.jpg");
+  }
+}
+
+@keyframes bg-gradient-move {
+  0% {
+    left: 0%;
+  }
+  100% {
+    left: -600%;
+  }
 }
 
 .cursor-drag {
