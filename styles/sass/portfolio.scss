@@ -213,9 +213,13 @@
     margin: 1.25rem 0 2.5rem 0;
     text-align: center;
   }
+  @media screen and (max-width: $md) {
+    margin: 1.25rem auto 2.5rem;
+    max-width: 34rem;
+  }
   @media screen and (max-width: $sm) {
     font-size: 0.875rem;
-    margin: 1.25rem 0 3.1rem 0;
+    margin: 1.25rem auto 3.1rem;
   }
 }
 .portfolio__social-links {

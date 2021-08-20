@@ -1039,10 +1039,16 @@ h1 {
     text-align: center;
   }
 }
+@media screen and (max-width: 1050px) {
+  .portfolio__text {
+    margin: 1.25rem auto 2.5rem;
+    max-width: 34rem;
+  }
+}
 @media screen and (max-width: 767px) {
   .portfolio__text {
     font-size: 0.875rem;
-    margin: 1.25rem 0 3.1rem 0;
+    margin: 1.25rem auto 3.1rem;
   }
 }
 
