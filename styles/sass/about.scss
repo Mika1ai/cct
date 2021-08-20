@@ -80,12 +80,25 @@
     // max-width: 18rem;
   }
   @media screen and (max-width: $md) {
-    margin: 0;
-    max-width: unset;
+    margin: auto;
+    align-items: center;
+    max-width: 34rem;
+    padding-bottom: 2rem;
+  }
+  @media screen and (max-width: $xs) {
+    align-items: flex-start;
   }
 }
 .h2--about {
   margin-bottom: 1.3rem;
+}
+.h3--about {
+  @media screen and (max-width: $md) {
+    text-align: center;
+  }
+  @media screen and (max-width: $xs) {
+    text-align: start;
+  }
 }
 .about__list {
   display: grid;
@@ -104,8 +117,14 @@
   letter-spacing: $t-ls-2;
   font-size: 1.3125rem;
   line-height: 1.47em;
+  @media screen and (max-width: $md) {
+    text-align: center;
+  }
   @media screen and (max-width: $sm) {
     margin-bottom: 0.625rem;
+  }
+  @media screen and (max-width: $xs) {
+    text-align: start;
   }
 }
 .about__l-item-text {
@@ -114,7 +133,13 @@
   line-height: 1.6em;
   color: $t-color-100;
   letter-spacing: $t-ls-2;
+  @media screen and (max-width: $md) {
+    text-align: center;
+  }
   @media screen and (max-width: $sm) {
     font-size: 0.875rem;
+  }
+  @media screen and (max-width: $xs) {
+    text-align: start;
   }
 }

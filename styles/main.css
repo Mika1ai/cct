@@ -705,13 +705,31 @@ h1 {
 }
 @media screen and (max-width: 1050px) {
   .about__right {
-    margin: 0;
-    max-width: unset;
+    margin: auto;
+    align-items: center;
+    max-width: 34rem;
+    padding-bottom: 2rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .about__right {
+    align-items: flex-start;
   }
 }
 
 .h2--about {
   margin-bottom: 1.3rem;
+}
+
+@media screen and (max-width: 1050px) {
+  .h3--about {
+    text-align: center;
+  }
+}
+@media screen and (max-width: 480px) {
+  .h3--about {
+    text-align: start;
+  }
 }
 
 .about__list {
@@ -735,9 +753,19 @@ h1 {
   font-size: 1.3125rem;
   line-height: 1.47em;
 }
+@media screen and (max-width: 1050px) {
+  .about__l-item-count {
+    text-align: center;
+  }
+}
 @media screen and (max-width: 767px) {
   .about__l-item-count {
     margin-bottom: 0.625rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .about__l-item-count {
+    text-align: start;
   }
 }
 
@@ -748,9 +776,19 @@ h1 {
   color: white;
   letter-spacing: -0.02em;
 }
+@media screen and (max-width: 1050px) {
+  .about__l-item-text {
+    text-align: center;
+  }
+}
 @media screen and (max-width: 767px) {
   .about__l-item-text {
     font-size: 0.875rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .about__l-item-text {
+    text-align: start;
   }
 }
 
@@ -2199,7 +2237,7 @@ body {
   background-repeat: no-repeat;
   background-image: url("../images/bg-gradient.jpg");
   animation-name: bg-gradient-move;
-  animation-duration: 15s;
+  animation-duration: 20s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
 }
