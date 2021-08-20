@@ -1606,7 +1606,7 @@ h1 {
 .h2--quote {
   margin-bottom: 3.125rem;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1050px) {
   .h2--quote {
     margin-bottom: 1.25rem;
   }
