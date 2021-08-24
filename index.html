@@ -38,6 +38,12 @@
       <img class="cursor__circle" src="./images/cursor-circle.svg" alt="" />
       <img class="cursor__image" src="./images/arrow.svg" alt="" />
     </div>
+		<div class="preloader">
+			<div class="container">
+				<lottie-player class="preloader__lottie" src="./images/preloader.json" renderer="svg" autoplay mode="normal">
+				</lottie-player>
+			</div>
+		</div>
     <div class="logo-wrapper">
       <div class="container">
 				<lottie-player class="logo" src="./images/button.json" renderer="svg" autoplay loop mode="normal">
@@ -207,10 +213,11 @@
           <div class="about__left">
             <div class="logo-wrapper--second">
               <div class="container">
-                <img class="logo" src="./images/logo-test.png" alt="cct-logo" />
+								<lottie-player class="logo--second" src="./images/button.json" renderer="svg" autoplay loop mode="normal">
+								</lottie-player>
               </div>
             </div>
-            <a class="about__button" href="#"></a>
+						<a class="about__button" href="#">Let's work<br>together</a>
           </div>
           <div class="about__right">
             <h2 class="h2 h2--about">About us</h2>
@@ -1583,8 +1590,9 @@
       </div>
     </footer>
 				
-				<script src="https://unpkg.com/@lottiefiles/lottie-player@0.4.0/dist/tgs-player.js"></script>
-				<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+		<script src="./scripts/aboutButton.js"></script>
+		<script src="https://unpkg.com/@lottiefiles/lottie-player@0.4.0/dist/tgs-player.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="./scripts/testimonialsSwiper.js"></script>
     <script src="./scripts/portfolioSwiper.js"></script>
@@ -1592,8 +1600,7 @@
     <script src="./scripts/button.js"></script>
 		<script src="./scripts/cursor.js"></script>
     <script src="./scripts/cardDescr.js"></script>
-    <script src="./scripts/textareaHeight.js"></script>
-    <script src="./scripts/aboutButton.js"></script>
-    <script src="./scripts/bgGradient.js"></script>
+		<script src="./scripts/textareaHeight.js"></script>
+		<script src="./scripts/bgGradient.js"></script>
   </body>
 </html>

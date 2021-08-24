@@ -142,7 +142,6 @@ body {
   transition: height 0.5s ease, opacity 0.5s ease;
   max-height: 100%;
   opacity: 0;
-  // overflow: hidden;
 }
 // white->pink icon
 .w-p__icon {
@@ -161,66 +160,7 @@ body {
     }
   }
 }
-.logo-wrapper {
-  position: fixed;
-  z-index: 1;
-  top: 10vmin;
-  height: 80vmin;
-  width: 100%;
-  left: 0;
-  opacity: 1;
 
-  @media screen and (max-width: $lg) {
-    top: 15vmin;
-    height: 70vmin;
-  }
-  @media screen and (max-width: $md) {
-    height: 70vmin;
-    top: 15vmin;
-    .logo {
-      margin: auto;
-    }
-    // left: 15vmin;
-  }
-  @media screen and (max-width: $xs) {
-    height: 100vmin;
-    top: 35vmin;
-  }
-  &--second {
-    display: none;
-    height: 70vmin;
-    top: 15vmin;
-    position: absolute;
-    top: 0;
-    left: -40px;
-    height: 100vh;
-    width: 100vw;
-    @media screen and (max-width: $md) {
-      display: inline-block;
-    }
-    @media screen and (max-width: $sm) {
-      left: -10px;
-    }
-    .logo {
-      position: sticky;
-      height: 70vmin;
-      top: 15vmin;
-      margin: auto;
-      @media screen and (max-width: $xs) {
-        height: 100vmin;
-        top: 35vmin;
-      }
-    }
-  }
-}
-.logo-wrapper--second .container,
-.logo-wrapper .container {
-  height: 100%;
-}
-.logo {
-  object-fit: contain;
-  height: 100%;
-}
 .bg-gradient {
   z-index: -1;
   position: absolute;
@@ -297,6 +237,130 @@ body {
   right: -1rem;
 }
 
-#__lottie_element_9 {
-	transition: opacity 0.4s ease;
+.preloader {
+	width: 100%;
+	height: 100vh;
+	position: fixed;
+	z-index: 9999;
+	padding: 10vmin 0;
+	background-color: #232323;
+	display: block;
+	@media screen and (max-width: $lg) {
+    padding: 15vmin 0;
+  }
+	@media screen and (max-width: $xs) {
+    padding-top: 35vmin;
+		.preloader__lottie {
+      width: 100%;
+			height: 100vh;
+    }
+  }
+
+	animation-name: preloader-disappear;
+	animation-delay: 4s;
+	animation-duration: 1s;
+	animation-iteration-count: 1;
+	animation-fill-mode: forwards;
+}
+
+.preloader .container {
+	position: relative;
+	left: -2px;
+	@media screen and (max-width: $xs) {
+    left: 0;
+  }
+
+}
+
+
+@keyframes preloader-disappear {
+	0% {
+		opacity: 1;
+	}
+	100% {
+		pointer-events: none;
+		opacity: 0;
+	}
+}
+.preloader__lottie {
+	width: 80vmin;
+	height: 80vmin;
+	@media screen and (max-width: $lg) {
+    height: 70vmin;
+		width: 70vmin;
+  }
+	@media screen and (max-width: $md) {
+    margin: auto;
+  }
+}
+
+.logo-wrapper {
+  position: fixed;
+  z-index: 1;
+  top: 10vmin;
+  height: 80vmin;
+  width: 100%;
+  left: 0;
+  opacity: 1;
+	.logo {
+		width: 80vmin;
+	}
+
+  @media screen and (max-width: $lg) {
+    top: 15vmin;
+    height: 70vmin;
+		.logo {
+      width: 70vmin;
+    }
+  }
+  @media screen and (max-width: $md) {
+    height: 70vmin;
+    top: 15vmin;
+		.logo {
+      margin: auto;
+    }
+  }
+  @media screen and (max-width: $xs) {
+    height: 100vmin;
+    top: 35vmin;
+		.logo {
+      width: 100vmin;
+    }
+  }
+  &--second {
+    display: none;
+    height: 70vmin;
+    top: 15vmin;
+    position: absolute;
+    top: 0;
+    left: -40px;
+    height: 100vh;
+    width: 100vw;
+    @media screen and (max-width: $md) {
+      display: inline-block;
+    }
+    @media screen and (max-width: $sm) {
+      left: -10px;
+    }
+		.logo--second {
+      position: sticky;
+      height: 70vmin;
+			width: 70vmin;
+      top: 15vmin;
+      margin: auto;
+      @media screen and (max-width: $xs) {
+        height: 100vmin;
+				width: 100%;
+        top: 35vmin;
+      }
+    }
+  }
+}
+.logo-wrapper--second .container,
+.logo-wrapper .container {
+  height: 100%;
+}
+.logo {
+  object-fit: contain;
+  height: 100%;
 }
