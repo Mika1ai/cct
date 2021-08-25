@@ -11,7 +11,7 @@ const logo = document.querySelector(".logo");
 const logoSecond = document.querySelector(".logo--second");
 
 logo.addEventListener("ready", () => {
-	const logoButton = logo.renderRoot.children[0].querySelector("#__lottie_element_63");
+	const logoButton = logo.renderRoot.children[0].querySelector("#__lottie_element_60");
 
 	logoButton.style.opacity = "0";
 	logoButton.style.transition = "opacity 0.3s ease";
@@ -39,7 +39,7 @@ logo.addEventListener("ready", () => {
 if (window.innerWidth < 1050) {
 		
 	logoSecond.addEventListener("ready", () => {
-		const logoButtonSecond = logoSecond.renderRoot.children[0].querySelector("#__lottie_element_118");
+		const logoButtonSecond = logoSecond.renderRoot.children[0].querySelector("#__lottie_element_115");
 	
 		logoButtonSecond.style.opacity = "0";
 		logoButtonSecond.style.transition = "opacity 0.3s ease";
