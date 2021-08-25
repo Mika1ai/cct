@@ -20,7 +20,7 @@ logo.addEventListener("ready", () => {
 		window.addEventListener("scroll", () => {
 			if (
 				aboutButton.offsetTop > 0 &&
-				aboutButton.offsetTop < aboutLeft.scrollHeight - aboutButton.scrollHeight
+				aboutButton.offsetTop < aboutLeft.scrollHeight - aboutButton.scrollHeight - 1
 			) {
 				aboutButton.style.opacity = "1";
 				aboutButton.style.pointerEvents = "auto";
@@ -36,7 +36,7 @@ logo.addEventListener("ready", () => {
 
 
 
-if (window.innerWidth < 1050) {
+if (window.innerWidth <= 1050) {
 		
 	logoSecond.addEventListener("ready", () => {
 		const logoButtonSecond = logoSecond.renderRoot.children[0].querySelector("#__lottie_element_115");

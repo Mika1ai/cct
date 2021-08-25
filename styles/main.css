@@ -660,13 +660,13 @@ h1 {
   color: white;
   letter-spacing: -0.04em;
   font-weight: 700;
-  margin: 0 9.5rem 0 auto;
+  margin: 0 15vmin 0 auto;
   opacity: 0;
   transition: opacity 0.3s ease;
 }
 @media screen and (max-width: 1280px) {
   .about__button {
-    margin: 0 8.3rem 0 auto;
+    margin: 0 14vmin 0 auto;
     top: 37vmin;
     width: 26vmin;
     height: 26vmin;
