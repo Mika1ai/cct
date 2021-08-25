@@ -36,15 +36,17 @@ if (window.innerWidth > 1050) {
     y = e.clientY;
   });
 
-  // document.addEventListener("scroll", function (e) {
-  //   if (document.elementFromPoint(x, y).closest(".cc-block")) {
-  //     cursor.classList.remove("hidden");
-  //     document.body.style.cursor = "none";
-  //   } else {
-  //     cursor.classList.add("hidden");
-  //     document.body.style.cursor = "auto";
-  //   }
-  // });
+	document.addEventListener("scroll", () => {
+		if(document.elementFromPoint(x, y) !== null) {
+			if (document.elementFromPoint(x, y).closest(".cc-block")) {
+				cursor.classList.remove("hidden");
+				document.body.style.cursor = "none";
+			} else {
+				cursor.classList.add("hidden");
+				document.body.style.cursor = "auto";
+			}
+		}
+  });
 
   const cursorDrag = document.querySelector(".cursor-drag");
 
