@@ -13,8 +13,6 @@ const logoSecond = document.querySelector(".logo--second");
 logo.addEventListener("ready", () => {
 	const logoButton = logo.renderRoot.children[0].querySelector("#__lottie_element_63");
 
-	// console.log(logoButton);
-
 	logoButton.style.opacity = "0";
 	logoButton.style.transition = "opacity 0.3s ease";
 
@@ -36,13 +34,15 @@ logo.addEventListener("ready", () => {
 	}
 });
 
-logoSecond.addEventListener("ready", () => {
-	const logoButtonSecond = logoSecond.renderRoot.children[0].querySelector("#__lottie_element_118");
 
-	logoButtonSecond.style.opacity = "0";
-	logoButtonSecond.style.transition = "opacity 0.3s ease";
 
-	if (window.innerWidth < 1050) {
+if (window.innerWidth < 1050) {
+		
+	logoSecond.addEventListener("ready", () => {
+		const logoButtonSecond = logoSecond.renderRoot.children[0].querySelector("#__lottie_element_118");
+	
+		logoButtonSecond.style.opacity = "0";
+		logoButtonSecond.style.transition = "opacity 0.3s ease";
 
 		window.addEventListener("scroll", () => {
 			if (
@@ -75,10 +75,11 @@ logoSecond.addEventListener("ready", () => {
 			document.documentElement.scrollTop;
 
 		logoWrapperSecond.style.height = `${heightOfBody - heightOverLogo}px`;
-	}
+	});
+}
 	
 
-});
+
 
 // setTimeout(() => {
 
