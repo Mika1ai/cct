@@ -2126,6 +2126,49 @@ body {
     transform: rotate(360deg);
   }
 }
+.cursor-drag {
+  display: flex;
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  transition-delay: 0.2s;
+  transition: opacity 0.1s ease, transform 0.1s ease;
+  opacity: 1;
+}
+.cursor-drag.hidden {
+  opacity: 0;
+  transform: scale(0.4);
+}
+
+.cursor-drag__arrow-left {
+  transform: rotate(180deg);
+  position: absolute;
+  left: -1rem;
+}
+
+.cursor-drag__circle {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.cursor-drag__dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background-color: white;
+}
+
+.cursor-drag__arrow-right {
+  position: absolute;
+  right: -1rem;
+}
+
 .cc-block {
   cursor: none;
 }
@@ -2211,49 +2254,6 @@ body {
     left: -600%;
   }
 }
-.cursor-drag {
-  display: flex;
-  position: fixed;
-  pointer-events: none;
-  z-index: 9999;
-  transition-delay: 0.2s;
-  transition: opacity 0.1s ease, transform 0.1s ease;
-  opacity: 1;
-}
-.cursor-drag.hidden {
-  opacity: 0;
-  transform: scale(0.4);
-}
-
-.cursor-drag__arrow-left {
-  transform: rotate(180deg);
-  position: absolute;
-  left: -1rem;
-}
-
-.cursor-drag__circle {
-  width: 2.5rem;
-  height: 2.5rem;
-  border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.2);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-}
-
-.cursor-drag__dot {
-  width: 0.5rem;
-  height: 0.5rem;
-  border-radius: 50%;
-  background-color: white;
-}
-
-.cursor-drag__arrow-right {
-  position: absolute;
-  right: -1rem;
-}
-
 .preloader {
   width: 100%;
   height: 100vh;
@@ -2400,6 +2400,25 @@ body {
 .logo {
   object-fit: contain;
   height: 100%;
+}
+
+.cursor-block {
+  z-index: 9999;
+  position: fixed;
+  width: 4.6875rem;
+  height: 4.6875rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+}
+.cursor-block .cursor {
+  position: relative;
+}
+.cursor-block .cursor-drag {
+  position: absolute;
+  top: 25%;
+  left: 25%;
 }
 
 /*# sourceMappingURL=main.css.map */
