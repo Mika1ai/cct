@@ -1,0 +1,39 @@
+.section-pp--thinks {
+	padding: 12.5rem 0 11.875rem 0;
+	@media screen and (max-width: $md) {
+    padding: 6.25rem 0 3.75rem 0;
+  }
+	@media screen and (max-width: $sm) {
+    padding: 6.25rem 0 0 0;
+  }
+}
+
+.pp-thinks {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.h2-pp-thinks {
+	font-size: 1.3125rem;
+	margin-bottom: 1.25rem;
+}
+.pp-thinks__text {
+	font-size: 2.5rem;
+	line-height: 1.4em;
+	letter-spacing: $t-ls-4;
+	text-align: center;
+	color: $t-color-100;
+	font-weight: 700;
+	@media screen and (max-width: $sm) {
+    font-size: 1.5rem;
+  }
+}
+.pp-thinks__name {
+	margin-top: 1.875rem;
+	font-size: 21px;
+	line-height: 1.5em;
+	letter-spacing: $t-ls-2;
+	font-weight: 700;
+	color: $t-color-50;
+}

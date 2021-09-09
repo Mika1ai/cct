@@ -43,3 +43,4 @@ if (window.innerWidth > 1650) {
   gradientLeft.style.width = gradientRight.style.width = `${gradientWidth}px`;
   gradientLeft.style.left = gradientRight.style.right = `-${gradientWidth}px`;
 }
+

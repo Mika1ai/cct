@@ -54,10 +54,19 @@ if (window.innerWidth > 1050) {
 		}	
 	});
 
-  testimonialsSwiper.on("touchStart", () => {
-    cursorType = "swipe";
-  });
-  testimonialsSwiper.on("touchEnd", () => {
-    cursorType = "default";
-  });
+	function swiperTouch(swiper) {
+		swiper.on("touchStart", () => {
+			cursorType = "swipe";
+		});
+		swiper.on("touchEnd", () => {
+			cursorType = "default";
+		});
+	}
+
+	
+	if (typeof testimonialsSwiper !== "undefined") {
+		swiperTouch(testimonialsSwiper);
+	} else if (typeof ppSwiper !== "undefined") {
+		swiperTouch(ppSwiper);
+	}
 }

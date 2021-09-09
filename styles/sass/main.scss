@@ -10,6 +10,10 @@
 @import "./blog.scss";
 @import "./quote.scss";
 @import "./footer.scss";
+@import "./pp-hero.scss";
+@import "./pp-about.scss";
+@import "./pp-slider.scss";
+@import "./pp-thinks.scss";
 
 body {
   background-color: $bg-color;
@@ -77,6 +81,9 @@ body {
 }
 .button__text {
   font-weight: 700;
+	font-size: 1.125rem;
+	line-height: 1.5em;
+	letter-spacing: $t-ls-2;
   color: $t-color-100;
 }
 //cursor
@@ -246,6 +253,7 @@ body {
 	padding: 10vmin 0;
 	background-color: #232323;
 	display: block;
+	transition: opacity 1s ease;
 	@media screen and (max-width: $lg) {
     padding: 15vmin 0;
   }
@@ -257,7 +265,7 @@ body {
     }
   }
 
-	animation-name: preloader-disappear;
+	// animation-name: preloader-disappear;
 	animation-delay: 4s;
 	animation-duration: 1s;
 	animation-iteration-count: 1;
