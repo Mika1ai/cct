@@ -2354,7 +2354,7 @@ h1 {
 
 .inner-hero {
   margin: 0 2.5rem;
-  background-image: url("../../images/blog-image-2.jpg");
+  background-image: url("../images/blog-image-2.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 50%;
