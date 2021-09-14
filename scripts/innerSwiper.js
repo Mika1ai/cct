@@ -24,7 +24,7 @@ if (window.innerWidth < 1281) {
 		breakpoints: {
 			0: {
 				slidesPerGroup: 1,
-				slidesPerView: 1.2,
+				slidesPerView: 1.1,
 			},
 			480: {
 				slidesPerGroup: 1,
