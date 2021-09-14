@@ -43,11 +43,3 @@ const ppSwiper = new Swiper(".pp__swiper-container", {
     },
   },
 });
-
-// const ppSwiperSectionWidth =
-// 	document.querySelector(".section-pp--swiper").clientWidth;
-// const ppSwiperCards = document.querySelectorAll(".pp__card");
-
-// for (let i = 0; i < ppSwiperCards.length; i++) {
-// 	ppSwiperCards[i].style.maxWidth = `${(ppSwiperSectionWidth - 40) / 3}px`
-// }

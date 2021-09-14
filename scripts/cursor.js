@@ -68,5 +68,7 @@ if (window.innerWidth > 1050) {
 		swiperTouch(testimonialsSwiper);
 	} else if (typeof ppSwiper !== "undefined") {
 		swiperTouch(ppSwiper);
+	} else if (typeof innerSwiper !== "undefined") {
+		swiperTouch(innerSwiper);
 	}
 }

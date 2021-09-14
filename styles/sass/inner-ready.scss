@@ -1,0 +1,78 @@
+.section-inner--ready {
+	padding: 9.375rem 0 5.625rem 0;
+	@media screen and (max-width: $sm) {
+		padding: 6.25rem 0 0 0;
+	}
+}
+.inner-ready__content {
+	display: grid;
+	grid-template-columns: 1fr 750px;
+	@media screen and (max-width: $lg) {
+		grid-template-columns: 1fr 650px;
+	}
+	@media screen and (max-width: $md) {
+		grid-template-columns: 1fr;
+	}
+}
+.inner-ready__left {
+	position: relative;
+	@media screen and (max-width: $md) {
+		grid-row-start: 2;
+		width: 100%;
+	}
+}
+.inner-ready__button-lottie {
+	position: absolute;
+	top: 0;
+	left: 0;
+	@media screen and (max-width: $md) {
+		margin: auto;
+		left: 50%;
+		transform: translate(-50%, 0);
+		width: 19.375rem;
+	}
+	@media screen and (max-width: $xs) {
+		width: 10.625rem;
+	}
+}
+.inner-ready__button {
+	position: relative;
+	z-index: 1;
+	width: 19.375rem;
+	height: 19.375rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	border-radius: 50%;
+	font-size: 1.5rem;
+	line-height: 1.3em;
+	letter-spacing: $t-ls-4;
+	font-weight: 700;
+	color: $t-color-100;
+	@media screen and (max-width: $md) {
+		margin: auto;
+	}
+	@media screen and (max-width: $xs) {
+		height: 10.625rem;
+		width: 10.625rem;
+		font-size: 1rem;
+	}
+}
+.inner-ready__right {
+	@media screen and (max-width: $md) {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin-bottom: 50px;
+	}
+}
+.h2-inner-ready {
+	margin-bottom: 1.25rem;
+}
+.h3-inner-ready {
+	text-transform: none;
+	@media screen and (max-width: $md) {
+		text-align: center;
+	}
+}
