@@ -16,12 +16,12 @@
 </head>
 
 <body>
-	<div class="preloader">
+	<!-- <div class="preloader">
 		<div class="container">
 			<lottie-player class="preloader__lottie" src="./images/preloader.json" renderer="svg" mode="normal">
 			</lottie-player>
 		</div>
-	</div>
+	</div> -->
 	<div class="cursor-block">
 		<div class="cursor-drag hidden">
 			<div class="cursor-drag__circle">
@@ -81,11 +81,20 @@
 	<section class="section section-inner--info">
 		<div class="container">
 			<div class="inner-info">
-				<div class="inner-info__nav-container">
-					<div class="inner-info__nav"></div>
-				</div>
+				<div class="inner-info__ready-container">
+					<div class="inner-info__nav-container">
+						<div class="inner-info__nav"></div>
+					</div>
+					<div class="inner-ready__left">
+						<a class="inner-ready__button" href="#">Let's work<br>together</a>
+						<lottie-player class="inner-ready__button-lottie" src="./images/button-inner.json" renderer="svg" autoplay loop
+							mode="normal">
+						</lottie-player>
+					</div>
+					</div>
 				<div class="inner-info__article">
-					<div class="inner-info__text">
+					<div class="inner-info__article-block">
+						<div class="inner-info__text">
 						<h2><span>Introduction</span></h2>
 						<p>Professional web design has become vital during recent years. A few years ago, it was estimated that a
 							visitor to a web site took about 8 seconds to decide to stay on that web site or click the “Back” button.
@@ -173,8 +182,8 @@
 								<p>Lorem ipsum dolor sit amet, consecte tur adipiscing elit donec sodales ultrices volutpat.</p>
 							</li>
 						</ul>
-					</div>
-					<div class="inner-info__author-block">
+						</div>
+						<div class="inner-info__author-block">
 						<div class="inner-info__author">
 							<img class="inner-info__author-photo" src="./images/inner-author-photo.jpg" alt="author photo">
 							<div class="inner-info__author-status-name">
@@ -208,25 +217,20 @@
 								</svg>
 							</a>
 						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<section class="section section-inner--ready">
-		<div class="container">
-			<div class="inner-ready__content">
-				<div class="inner-ready__left">
-					<a class="inner-ready__button" href="#">Let's work<br>together</a>
-					<lottie-player class="inner-ready__button-lottie" src="./images/button-inner.json" renderer="svg" autoplay
-						loop mode="normal">
-					</lottie-player>
-				</div>
-				<div class="inner-ready__right">
-					<h2 class="h2 h2-inner-ready">Are You Ready?</h2>
-					<h3 class="h3 h3-inner-ready">When you are ready to get more pecific information about your project, click
-						here and fill out our handy online form for a free web design quote.</h3>
-				</div>
+						</div>
+						</div>
+						<div class="inner-ready__right">
+							<h2 class="h2 h2-inner-ready">Are You Ready?</h2>
+							<h3 class="h3 h3-inner-ready">When you are ready to get more pecific information about your project, click
+								here and fill out our handy online form for a free web design quote.</h3>
+							<div class="inner-ready__left mobile">
+								<a class="inner-ready__button" href="#">Let's work<br>together</a>
+								<lottie-player class="inner-ready__button-lottie" src="./images/button-inner.json" renderer="svg" autoplay loop
+									mode="normal">
+								</lottie-player>
+							</div>
+							</div>
+						</div>
 			</div>
 		</div>
 	</section>
@@ -440,7 +444,6 @@
 		</div>
 	</footer>
 
-
 	<script src="https://unpkg.com/@lottiefiles/lottie-player@0.4.0/dist/tgs-player.js"></script>
 	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 	<script src="./scripts/innerSwiper.js"></script>
@@ -450,7 +453,7 @@
 	<script src="./scripts/cardDescr.js"></script>
 	<script src="./scripts/textareaHeight.js"></script>
 	<script src="scripts/innerInfo.js"></script>
-	<script src="./scripts/preloader.js"></script>
+	<!-- <script src="./scripts/preloader.js"></script> -->
 </body>
 
 </html>

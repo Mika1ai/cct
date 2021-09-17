@@ -2446,6 +2446,12 @@ h1 {
   }
 }
 
+.inner-info__nav-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
 .inner-info__nav {
   position: sticky;
   top: 6.25rem;
@@ -2454,7 +2460,7 @@ h1 {
   row-gap: 0.9375rem;
   max-width: 16.875rem;
 }
-.inner-info__nav p {
+.inner-info__nav a {
   font-size: 1rem;
   line-height: 1.5em;
   letter-spacing: -0.02em;
@@ -2463,7 +2469,10 @@ h1 {
   transition: color 0.3s ease;
   cursor: pointer;
 }
-.inner-info__nav p:hover {
+.inner-info__nav a:hover {
+  color: rgba(255, 255, 255, 0.8);
+}
+.inner-info__nav a.active {
   color: white;
 }
 
@@ -2604,32 +2613,26 @@ h1 {
   box-shadow: none;
 }
 
-.section-inner--ready {
-  padding: 9.375rem 0 5.625rem 0;
-}
-@media screen and (max-width: 768px) {
-  .section-inner--ready {
-    padding: 6.25rem 0 0 0;
-  }
-}
-
-.inner-ready__content {
-  display: grid;
-  grid-template-columns: 1fr 750px;
+.inner-info__ready-container {
+  position: relative;
+  padding-top: calc(100vh - 27rem);
+  padding-bottom: 9.375rem;
 }
 @media screen and (max-width: 1280px) {
-  .inner-ready__content {
-    grid-template-columns: 1fr 650px;
+  .inner-info__ready-container {
+    padding-bottom: 11.25rem;
   }
 }
 @media screen and (max-width: 1050px) {
-  .inner-ready__content {
-    grid-template-columns: 1fr;
+  .inner-info__ready-container {
+    display: none;
   }
 }
 
 .inner-ready__left {
-  position: relative;
+  position: sticky;
+  top: calc(100vh - 22rem);
+  bottom: 6.25rem;
 }
 @media screen and (max-width: 1050px) {
   .inner-ready__left {
@@ -2637,11 +2640,24 @@ h1 {
     width: 100%;
   }
 }
+.inner-ready__left.mobile {
+  display: none;
+}
+@media screen and (max-width: 1050px) {
+  .inner-ready__left.mobile {
+    display: block;
+    position: relative;
+    top: 0;
+    bottom: 0;
+  }
+}
 
 .inner-ready__button-lottie {
   position: absolute;
   top: 0;
   left: 0;
+  width: 19.375rem;
+  height: 19.375rem;
 }
 @media screen and (max-width: 1050px) {
   .inner-ready__button-lottie {
@@ -2691,20 +2707,33 @@ h1 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 50px;
+    margin-bottom: 3.75rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .inner-ready__right {
+    margin-bottom: 0;
   }
 }
 
 .h2-inner-ready {
+  margin-top: 16.25rem;
   margin-bottom: 1.25rem;
+}
+@media screen and (max-width: 1050px) {
+  .h2-inner-ready {
+    margin-top: 6.25rem;
+  }
 }
 
 .h3-inner-ready {
   text-transform: none;
+  margin-bottom: 12.5rem;
 }
 @media screen and (max-width: 1050px) {
   .h3-inner-ready {
     text-align: center;
+    margin-bottom: 3.125rem;
   }
 }
 

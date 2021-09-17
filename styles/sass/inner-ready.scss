@@ -1,30 +1,39 @@
-.section-inner--ready {
-	padding: 9.375rem 0 5.625rem 0;
-	@media screen and (max-width: $sm) {
-		padding: 6.25rem 0 0 0;
-	}
-}
-.inner-ready__content {
-	display: grid;
-	grid-template-columns: 1fr 750px;
+
+.inner-info__ready-container {
+	position: relative;
+	padding-top: calc(100vh - 27rem);
+	padding-bottom: 9.375rem;
 	@media screen and (max-width: $lg) {
-		grid-template-columns: 1fr 650px;
+		padding-bottom: 11.25rem;
 	}
 	@media screen and (max-width: $md) {
-		grid-template-columns: 1fr;
+		display: none;
 	}
 }
 .inner-ready__left {
-	position: relative;
+	position: sticky;
+	top: calc(100vh - 22rem);
+	bottom: 6.25rem;
 	@media screen and (max-width: $md) {
 		grid-row-start: 2;
 		width: 100%;
+	}
+	&.mobile {
+		display: none;
+		@media screen and (max-width: $md) {
+			display: block;
+			position: relative;
+			top: 0;
+			bottom: 0;
+		}
 	}
 }
 .inner-ready__button-lottie {
 	position: absolute;
 	top: 0;
 	left: 0;
+	width: 19.375rem;
+	height: 19.375rem;
 	@media screen and (max-width: $md) {
 		margin: auto;
 		left: 50%;
@@ -64,15 +73,24 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		margin-bottom: 50px;
+		margin-bottom: 3.75rem;
+	}
+	@media screen and (max-width: $sm) {
+		margin-bottom: 0;
 	}
 }
 .h2-inner-ready {
+	margin-top: 16.25rem;
 	margin-bottom: 1.25rem;
+	@media screen and (max-width: $md) {
+		margin-top: 6.25rem;
+	}
 }
 .h3-inner-ready {
 	text-transform: none;
+	margin-bottom: 12.5rem;
 	@media screen and (max-width: $md) {
 		text-align: center;
+		margin-bottom: 3.125rem;
 	}
 }

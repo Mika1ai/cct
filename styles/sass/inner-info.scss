@@ -10,6 +10,12 @@
 		grid-template-columns: 1fr;
 	}
 }
+
+.inner-info__nav-container {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
 .inner-info__nav {
 	position: sticky;
 	top: 6.25rem;
@@ -17,7 +23,7 @@
 	grid-template-columns: 1fr;
 	row-gap: .9375rem;
 	max-width: 16.875rem;
-	p {
+	a {
 		font-size: 1rem;
 		line-height: 1.5em;
 		letter-spacing: $t-ls-2;
@@ -26,6 +32,9 @@
 		transition: color 0.3s ease;
 		cursor: pointer;
 		&:hover {
+			color: $t-color-80;
+		}
+		&.active {
 			color: $t-color-100;
 		}
 	}
