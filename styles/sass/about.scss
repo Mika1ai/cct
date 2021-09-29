@@ -45,26 +45,30 @@
   color: $t-color-100;
   letter-spacing: $t-ls-4;
   font-weight: 700;
-  background-image: linear-gradient(300deg, red, blue);
-  margin: 0 8rem 0 auto;
-  pointer-events: none;
+  margin: 0 15vmin 0 auto;
+	opacity: 0;
   transition: opacity 0.3s ease;
   @media screen and (max-width: $lg) {
-    margin: 0 6rem 0 auto;
+    margin: 0 14vmin 0 auto;
+		top: 37vmin;
+		width: 26vmin;
+    height: 26vmin;
   }
   @media screen and (max-width: $md) {
     grid-row-start: 2;
-    margin: 0 20vmin 0 auto;
+    margin: 0;
     position: relative;
-    top: 0;
+		z-index: 2;
+		left: 45%;
+    top: 2vmin;
   }
   @media screen and (max-width: $sm) {
-    margin: 0 23vmin 0 auto;
+		font-size: 1rem;
   }
   @media screen and (max-width: $xs) {
-    margin: 0 auto 0 42vmin;
-    width: 40vmin;
-    height: 40vmin;
+    width: 38vmin;
+    height: 38vmin;
+		top: 1vmin;
   }
 }
 .about__right {

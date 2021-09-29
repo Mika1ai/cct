@@ -19,28 +19,49 @@
     <title>CCT</title>
   </head>
   <body>
-    <div class="cursor-drag hidden">
-      <div class="cursor-drag__circle">
-        <img
-          class="cursor-drag__arrow-left"
-          src="./images/arrow.svg"
-          alt="arrow"
-        />
-        <div class="cursor-drag__dot"></div>
-        <img
-          class="cursor-drag__arrow-right"
-          src="./images/arrow.svg"
-          alt="arrow"
-        />
+    <div class="cursor-block">
+      <div class="cursor-drag hidden">
+        <div class="cursor-drag__circle">
+          <img
+            class="cursor-drag__arrow-left"
+            src="./images/arrow.svg"
+            alt="arrow"
+          />
+          <div class="cursor-drag__dot"></div>
+          <img
+            class="cursor-drag__arrow-right"
+            src="./images/arrow.svg"
+            alt="arrow"
+          />
+        </div>
+      </div>
+      <div class="cursor hidden">
+        <img class="cursor__circle" src="./images/cursor-circle.svg" alt="" />
+        <img class="cursor__image" src="./images/arrow.svg" alt="" />
       </div>
     </div>
-    <div class="cursor hidden">
-      <img class="cursor__circle" src="./images/cursor-circle.svg" alt="" />
-      <img class="cursor__image" src="./images/arrow.svg" alt="" />
+    <div class="preloader">
+      <div class="container">
+        <lottie-player
+          class="preloader__lottie"
+          src="./images/preloader.json"
+          renderer="svg"
+          mode="normal"
+        >
+        </lottie-player>
+      </div>
     </div>
     <div class="logo-wrapper">
       <div class="container">
-        <img class="logo" src="./images/logo-test.png" alt="cct-logo" />
+        <lottie-player
+          class="logo"
+          src="./images/button.json"
+          renderer="svg"
+          autoplay
+          loop
+          mode="normal"
+        >
+        </lottie-player>
       </div>
     </div>
 
@@ -206,10 +227,18 @@
           <div class="about__left">
             <div class="logo-wrapper--second">
               <div class="container">
-                <img class="logo" src="./images/logo-test.png" alt="cct-logo" />
+                <lottie-player
+                  class="logo--second"
+                  src="./images/button.json"
+                  renderer="svg"
+                  autoplay
+                  loop
+                  mode="normal"
+                >
+                </lottie-player>
               </div>
             </div>
-            <a class="about__button" href="#"></a>
+            <a class="about__button" href="#">Let's work<br />together</a>
           </div>
           <div class="about__right">
             <h2 class="h2 h2--about">About us</h2>
@@ -1462,9 +1491,22 @@
               <h3 class="h3 h3--quote">
                 you need a&nbspwebsite?<br />we can help
               </h3>
-              <a class="quote__link" href="#">
-                <p class="quote__link-text">ask for free quote</p>
-              </a>
+              <div class="quote__link-block">
+                <p class="quote__link-text">
+                  Call or fill out the form and tell us your ideas
+                </p>
+                <a class="button button--quote" href="tel:910-358-7498">
+                  <div class="button__arrow-block">
+                    <div class="button__circle"></div>
+                    <img
+                      class="button__arrow"
+                      src="./images/arrow.svg"
+                      alt="arrow"
+                    />
+                  </div>
+                  <p class="button__text">Click To Call</p>
+                </a>
+              </div>
             </div>
             <div class="quote__right">
               <form class="quote__form" action="#">
@@ -1502,7 +1544,7 @@
                     placeholder="Comments"
                   ></textarea>
                 </label>
-                <a class="button button--quote" type="submit" href="#">
+                <a class="button" type="submit" href="#">
                   <div class="button__arrow-block">
                     <div class="button__circle"></div>
                     <img
@@ -1582,6 +1624,7 @@
       </div>
     </footer>
 
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@0.4.0/dist/tgs-player.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="./scripts/testimonialsSwiper.js"></script>
@@ -1591,7 +1634,7 @@
     <script src="./scripts/cursor.js"></script>
     <script src="./scripts/cardDescr.js"></script>
     <script src="./scripts/textareaHeight.js"></script>
+    <script src="./scripts/preloader.js"></script>
     <script src="./scripts/aboutButton.js"></script>
-    <script src="./scripts/bgGradient.js"></script>
   </body>
 </html>

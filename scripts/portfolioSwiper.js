@@ -1,6 +1,6 @@
 "use strict";
 
-if (window.innerWidth < 767) {
+if (window.innerWidth <= 768) {
   const testimonialsSwiper = new Swiper(".portfolio__swiper-container", {
     direction: "horizontal",
     loop: false,

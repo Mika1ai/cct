@@ -1,0 +1,40 @@
+.section-pp--hero {
+	padding: 6.25rem 0;
+	@media screen and (max-width: $sm) {
+		padding: 6.25rem 0 3.125rem 0;
+	}
+}
+.pp-hero {
+	position: relative;
+	margin: 0 2.5rem;
+	padding: 2.375rem 0 6.6875rem 0;
+	overflow: hidden;
+	border-radius: 1.25rem;
+	@media screen and (max-width: $sm) {
+		margin: 0 .625rem;
+		padding: 5.625rem 0 4.1875rem 0;
+	}
+}
+.pp-hero__content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.button--back {
+	margin-right: auto;
+	@media screen and (max-width: $sm) {
+		display: none !important;
+	}
+}
+.h2-pp-hero {
+	margin-top: 1.75rem;
+	color: $t-color-100;
+	@media screen and (max-width: $sm) {
+		margin-top: 0rem;
+	}
+}
+.h1-pp {
+	text-align: center;
+	margin: 1.25rem 0 1.9375rem 0;
+	max-width: 50rem;
+}

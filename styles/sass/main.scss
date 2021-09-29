@@ -10,6 +10,14 @@
 @import "./blog.scss";
 @import "./quote.scss";
 @import "./footer.scss";
+@import "./pp-hero.scss";
+@import "./pp-about.scss";
+@import "./pp-slider.scss";
+@import "./pp-thinks.scss";
+@import "./inner-hero.scss";
+@import "./inner-info.scss";
+@import "./inner-ready.scss";
+@import "./inner-slider.scss";
 
 body {
   background-color: $bg-color;
@@ -77,6 +85,9 @@ body {
 }
 .button__text {
   font-weight: 700;
+	font-size: 1.125rem;
+	line-height: 1.5em;
+	letter-spacing: $t-ls-2;
   color: $t-color-100;
 }
 //cursor
@@ -101,10 +112,10 @@ body {
   height: 100%;
   top: 0;
   left: 0;
-  animation-name: cursor-circle-rotate;
-  animation-duration: 7.5s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
+  // animation-name: cursor-circle-rotate;
+  // animation-duration: 7.5s;
+  // animation-timing-function: linear;
+  // animation-iteration-count: infinite;
 }
 @keyframes cursor-circle-rotate {
   0% {
@@ -112,149 +123,6 @@ body {
   }
   100% {
     transform: rotate(360deg);
-  }
-}
-.cc-block {
-  cursor: none;
-}
-//
-.blur-wrapper {
-  position: relative;
-  z-index: 2;
-  overflow: hidden;
-  border-radius: 1.25rem;
-  box-shadow: inset 0 0 0 1px #ffffff33;
-  margin: 0 40px;
-  background-color: #ffffff08;
-  backdrop-filter: blur(16px);
-  @media screen and (max-width: $sm) {
-    margin: 0;
-    border-radius: 0;
-    box-shadow: none;
-    border-top: 1px solid #ffffff33;
-    border-bottom: 1px solid #ffffff33;
-  }
-}
-.card {
-  overflow: hidden;
-}
-.card__text-wrapper {
-  transition: height 0.5s ease, opacity 0.5s ease;
-  max-height: 100%;
-  opacity: 0;
-  // overflow: hidden;
-}
-// white->pink icon
-.w-p__icon {
-  box-shadow: inset 0 0 0 1px #ffffff;
-  border-radius: 1.125rem;
-  transition: background-color 0.3s ease;
-  path {
-    transition: fill 0.3s ease;
-  }
-}
-.w-p__p-element {
-  &:hover .w-p__icon {
-    background-color: $t-color-100;
-    path {
-      fill: #f13071;
-    }
-  }
-}
-.logo-wrapper {
-  position: fixed;
-  z-index: 1;
-  top: 10vmin;
-  height: 80vmin;
-  width: 100%;
-  left: 0;
-  opacity: 1;
-
-  @media screen and (max-width: $lg) {
-    top: 15vmin;
-    height: 70vmin;
-  }
-  @media screen and (max-width: $md) {
-    height: 70vmin;
-    top: 15vmin;
-    .logo {
-      margin: auto;
-    }
-    // left: 15vmin;
-  }
-  @media screen and (max-width: $xs) {
-    height: 100vmin;
-    top: 35vmin;
-  }
-  &--second {
-    display: none;
-    height: 70vmin;
-    top: 15vmin;
-    position: absolute;
-    top: 0;
-    left: -40px;
-    height: 100vh;
-    width: 100vw;
-    @media screen and (max-width: $md) {
-      display: inline-block;
-    }
-    @media screen and (max-width: $sm) {
-      left: -10px;
-    }
-    .logo {
-      position: sticky;
-      height: 70vmin;
-      top: 15vmin;
-      margin: auto;
-      @media screen and (max-width: $xs) {
-        height: 100vmin;
-        top: 35vmin;
-      }
-    }
-  }
-}
-.logo-wrapper--second .container,
-.logo-wrapper .container {
-  height: 100%;
-}
-.logo {
-  object-fit: contain;
-  height: 100%;
-}
-.bg-gradient {
-  z-index: -1;
-  position: absolute;
-  width: 600%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  background-image: url("../images/bg-gradient.jpg");
-
-  animation-name: bg-gradient-move;
-  animation-duration: 20s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-  &::after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    right: -100%;
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    background-image: url("../images/bg-gradient.jpg");
-  }
-}
-
-@keyframes bg-gradient-move {
-  0% {
-    left: 0%;
-  }
-  100% {
-    left: -600%;
   }
 }
 
@@ -295,4 +163,236 @@ body {
 .cursor-drag__arrow-right {
   position: absolute;
   right: -1rem;
+}
+
+.cc-block {
+  cursor: none;
+}
+//
+.blur-wrapper {
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+  border-radius: 1.25rem;
+  box-shadow: inset 0 0 0 1px #ffffff33;
+  margin: 0 40px;
+  background-color: #ffffff08;
+  backdrop-filter: blur(16px);
+  @media screen and (max-width: $sm) {
+    margin: 0;
+    border-radius: 0;
+    box-shadow: none;
+    border-top: 1px solid #ffffff33;
+    border-bottom: 1px solid #ffffff33;
+  }
+}
+.card {
+  overflow: hidden;
+}
+.card__text-wrapper {
+  transition: height 0.5s ease, opacity 0.5s ease;
+  max-height: 100%;
+  opacity: 0;
+}
+// white->pink icon
+.w-p__icon {
+  box-shadow: inset 0 0 0 1px #ffffff;
+  border-radius: 1.125rem;
+  transition: background-color 0.3s ease;
+  path {
+    transition: fill 0.3s ease;
+  }
+}
+.w-p__p-element {
+  &:hover .w-p__icon {
+    background-color: $t-color-100;
+    path {
+      fill: #f13071;
+    }
+  }
+}
+
+.bg-gradient {
+  z-index: -1;
+  position: absolute;
+  width: 600%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-image: url("../images/bg-gradient.jpg");
+
+  animation-name: bg-gradient-move;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: -100%;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-image: url("../images/bg-gradient.jpg");
+  }
+}
+
+@keyframes bg-gradient-move {
+  0% {
+    left: 0%;
+  }
+  100% {
+    left: -600%;
+  }
+}
+
+.preloader {
+	width: 100%;
+	height: 100vh;
+	position: fixed;
+	z-index: 9999;
+	padding: 10vmin 0;
+	background-color: #232323;
+	display: block;
+	transition: opacity 1s ease;
+	@media screen and (max-width: $lg) {
+    padding: 15vmin 0;
+  }
+	@media screen and (max-width: $xs) {
+    padding-top: 35vmin;
+		.preloader__lottie {
+      width: 100%;
+			height: 100vh;
+    }
+  }
+
+	// animation-name: preloader-disappear;
+	animation-delay: 4s;
+	animation-duration: 1s;
+	animation-iteration-count: 1;
+	animation-fill-mode: forwards;
+}
+
+.preloader .container {
+	position: relative;
+	left: -2px;
+	@media screen and (max-width: $xs) {
+    left: 0;
+  }
+
+}
+
+
+@keyframes preloader-disappear {
+	0% {
+		opacity: 1;
+	}
+	100% {
+		pointer-events: none;
+		opacity: 0;
+	}
+}
+.preloader__lottie {
+	width: 80vmin;
+	height: 80vmin;
+	@media screen and (max-width: $lg) {
+    height: 70vmin;
+		width: 70vmin;
+  }
+	@media screen and (max-width: $md) {
+    margin: auto;
+  }
+}
+
+.logo-wrapper {
+  position: fixed;
+  z-index: 1;
+  top: 10vmin;
+  height: 80vmin;
+  width: 100%;
+  left: 0;
+  opacity: 1;
+	.logo {
+		width: 80vmin;
+	}
+
+  @media screen and (max-width: $lg) {
+    top: 15vmin;
+    height: 70vmin;
+		.logo {
+      width: 70vmin;
+    }
+  }
+  @media screen and (max-width: $md) {
+    height: 70vmin;
+    top: 15vmin;
+		.logo {
+      margin: auto;
+    }
+  }
+  @media screen and (max-width: $xs) {
+    height: 100vmin;
+    top: 35vmin;
+		.logo {
+      width: 100vmin;
+    }
+  }
+  &--second {
+    display: none;
+    height: 70vmin;
+    top: 15vmin;
+    position: absolute;
+    top: 0;
+    left: -40px;
+    height: 100vh;
+    width: 100vw;
+    @media screen and (max-width: $md) {
+      display: inline-block;
+    }
+    @media screen and (max-width: $sm) {
+      left: -10px;
+    }
+		.logo--second {
+      position: sticky;
+      height: 70vmin;
+			width: 70vmin;
+      top: 15vmin;
+      margin: auto;
+      @media screen and (max-width: $xs) {
+        height: 100vmin;
+				width: 100%;
+        top: 35vmin;
+      }
+    }
+  }
+}
+.logo-wrapper--second .container,
+.logo-wrapper .container {
+  height: 100%;
+}
+.logo {
+  object-fit: contain;
+  height: 100%;
+}
+
+.cursor-block {
+	z-index: 9999;
+	position: fixed;
+	width: 4.6875rem;
+  height: 4.6875rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	pointer-events: none;
+	.cursor {
+		position: relative;
+	}
+	.cursor-drag {
+		position: absolute;
+		top: 25%;
+		left: 25%;
+	}
 }
