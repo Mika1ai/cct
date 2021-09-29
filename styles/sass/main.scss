@@ -85,9 +85,9 @@ body {
 }
 .button__text {
   font-weight: 700;
-	font-size: 1.125rem;
-	line-height: 1.5em;
-	letter-spacing: $t-ls-2;
+  font-size: 1.125rem;
+  line-height: 1.5em;
+  letter-spacing: $t-ls-2;
   color: $t-color-100;
 }
 //cursor
@@ -223,7 +223,7 @@ body {
   background-repeat: no-repeat;
   background-image: url("../images/bg-gradient.jpg");
 
-  animation-name: bg-gradient-move;
+  // animation-name: bg-gradient-move;
   animation-duration: 20s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
@@ -250,59 +250,57 @@ body {
 }
 
 .preloader {
-	width: 100%;
-	height: 100vh;
-	position: fixed;
-	z-index: 9999;
-	padding: 10vmin 0;
-	background-color: #232323;
-	display: block;
-	transition: opacity 1s ease;
-	@media screen and (max-width: $lg) {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  z-index: 9999;
+  padding: 10vmin 0;
+  background-color: #232323;
+  display: block;
+  transition: opacity 1s ease;
+  @media screen and (max-width: $lg) {
     padding: 15vmin 0;
   }
-	@media screen and (max-width: $xs) {
+  @media screen and (max-width: $xs) {
     padding-top: 35vmin;
-		.preloader__lottie {
+    .preloader__lottie {
       width: 100%;
-			height: 100vh;
+      height: 100vh;
     }
   }
 
-	// animation-name: preloader-disappear;
-	animation-delay: 4s;
-	animation-duration: 1s;
-	animation-iteration-count: 1;
-	animation-fill-mode: forwards;
+  // animation-name: preloader-disappear;
+  animation-delay: 4s;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
 }
 
 .preloader .container {
-	position: relative;
-	left: -2px;
-	@media screen and (max-width: $xs) {
+  position: relative;
+  left: -2px;
+  @media screen and (max-width: $xs) {
     left: 0;
   }
-
 }
-
 
 @keyframes preloader-disappear {
-	0% {
-		opacity: 1;
-	}
-	100% {
-		pointer-events: none;
-		opacity: 0;
-	}
+  0% {
+    opacity: 1;
+  }
+  100% {
+    pointer-events: none;
+    opacity: 0;
+  }
 }
 .preloader__lottie {
-	width: 80vmin;
-	height: 80vmin;
-	@media screen and (max-width: $lg) {
+  width: 80vmin;
+  height: 80vmin;
+  @media screen and (max-width: $lg) {
     height: 70vmin;
-		width: 70vmin;
+    width: 70vmin;
   }
-	@media screen and (max-width: $md) {
+  @media screen and (max-width: $md) {
     margin: auto;
   }
 }
@@ -315,28 +313,28 @@ body {
   width: 100%;
   left: 0;
   opacity: 1;
-	.logo {
-		width: 80vmin;
-	}
+  .logo {
+    width: 80vmin;
+  }
 
   @media screen and (max-width: $lg) {
     top: 15vmin;
     height: 70vmin;
-		.logo {
+    .logo {
       width: 70vmin;
     }
   }
   @media screen and (max-width: $md) {
     height: 70vmin;
     top: 15vmin;
-		.logo {
+    .logo {
       margin: auto;
     }
   }
   @media screen and (max-width: $xs) {
     height: 100vmin;
     top: 35vmin;
-		.logo {
+    .logo {
       width: 100vmin;
     }
   }
@@ -355,15 +353,15 @@ body {
     @media screen and (max-width: $sm) {
       left: -10px;
     }
-		.logo--second {
+    .logo--second {
       position: sticky;
       height: 70vmin;
-			width: 70vmin;
+      width: 70vmin;
       top: 15vmin;
       margin: auto;
       @media screen and (max-width: $xs) {
         height: 100vmin;
-				width: 100%;
+        width: 100%;
         top: 35vmin;
       }
     }
@@ -379,20 +377,20 @@ body {
 }
 
 .cursor-block {
-	z-index: 9999;
-	position: fixed;
-	width: 4.6875rem;
+  z-index: 9999;
+  position: fixed;
+  width: 4.6875rem;
   height: 4.6875rem;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	pointer-events: none;
-	.cursor {
-		position: relative;
-	}
-	.cursor-drag {
-		position: absolute;
-		top: 25%;
-		left: 25%;
-	}
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+  .cursor {
+    position: relative;
+  }
+  .cursor-drag {
+    position: absolute;
+    top: 25%;
+    left: 25%;
+  }
 }
