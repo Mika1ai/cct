@@ -177,7 +177,7 @@ body {
   box-shadow: inset 0 0 0 1px #ffffff33;
   margin: 0 40px;
   background-color: #ffffff08;
-  backdrop-filter: blur(16px);
+  backdrop-filter: blur(.5rem);
   @media screen and (max-width: $sm) {
     margin: 0;
     border-radius: 0;
@@ -242,7 +242,7 @@ body {
 
 @keyframes bg-gradient-move {
   0% {
-    left: 0%;
+    left: 0;
   }
   100% {
     left: -600%;
@@ -340,8 +340,6 @@ body {
   }
   &--second {
     display: none;
-    height: 70vmin;
-    top: 15vmin;
     position: absolute;
     top: 0;
     left: -40px;
