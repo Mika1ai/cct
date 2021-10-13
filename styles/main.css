@@ -539,7 +539,6 @@ h1 {
   flex-direction: column;
   justify-content: space-between;
   background-image: linear-gradient(205deg, rgba(255, 255, 255, 0.2) 0%, transparent 100%);
-  backdrop-filter: blur(2.625rem);
   padding: 2.5rem;
   position: relative;
   overflow: hidden;
@@ -553,7 +552,7 @@ h1 {
   left: 0;
   background-image: linear-gradient(205deg, rgba(255, 255, 255, 0.2) 0%, transparent 100%);
   transition: opacity 0.3s ease;
-  opacity: 0%;
+  opacity: 0;
 }
 .wwd__card:hover::after {
   opacity: 100%;
@@ -1821,7 +1820,7 @@ h1 {
   border-radius: 1.25rem;
   box-shadow: inset 0 0 0 1px #ffffff33;
   background-color: #ffffff08;
-  backdrop-filter: blur(16px);
+  backdrop-filter: blur(1rem);
 }
 @media screen and (max-width: 768px) {
   .footer {
@@ -1896,7 +1895,7 @@ h1 {
 .footer__nav-link-name::after {
   content: "";
   position: absolute;
-  width: 0px;
+  width: 0;
   height: 1px;
   bottom: 0.25em;
   left: 0;
@@ -1951,7 +1950,7 @@ h1 {
 .footer__contacts-link::after {
   content: "";
   position: absolute;
-  width: 0px;
+  width: 0;
   height: 1px;
   bottom: 0.25em;
   left: 0;
@@ -3185,7 +3184,7 @@ body {
   box-shadow: inset 0 0 0 1px #ffffff33;
   margin: 0 40px;
   background-color: #ffffff08;
-  backdrop-filter: blur(16px);
+  backdrop-filter: blur(1rem);
 }
 @media screen and (max-width: 768px) {
   .blur-wrapper {
@@ -3251,7 +3250,7 @@ body {
 
 @keyframes bg-gradient-move {
   0% {
-    left: 0%;
+    left: 0;
   }
   100% {
     left: -600%;
@@ -3362,8 +3361,6 @@ body {
 }
 .logo-wrapper--second {
   display: none;
-  height: 70vmin;
-  top: 15vmin;
   position: absolute;
   top: 0;
   left: -40px;
