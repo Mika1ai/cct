@@ -11,6 +11,7 @@ const logo = document.querySelector(".logo");
 const logoSecond = document.querySelector(".logo--second");
 
 logo.addEventListener("ready", () => {
+	console.log("ready");
 	const logoButton = logo.renderRoot.children[0].querySelector("#__lottie_element_60");
 
 	logoButton.style.opacity = "0";
@@ -39,6 +40,7 @@ logo.addEventListener("ready", () => {
 if (window.innerWidth <= 1050) {
 		
 	logoSecond.addEventListener("ready", () => {
+		console.log("ready");
 		const logoButtonSecond = logoSecond.renderRoot.children[0].querySelector("#__lottie_element_115");
 	
 		logoButtonSecond.style.opacity = "0";
@@ -77,3 +79,7 @@ if (window.innerWidth <= 1050) {
 		logoWrapperSecond.style.height = `${heightOfBody - heightOverLogo}px`;
 	});
 }
+
+document.addEventListener('readystatechange', () => {
+	console.log(document.readyState)
+});
