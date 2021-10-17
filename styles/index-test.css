@@ -1,0 +1,6 @@
+.bg-gradient {
+  animation-name: bg-gradient-move;
+}
+.cursor__circle {
+  animation-name: cursor-circle-rotate;
+}
