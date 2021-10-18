@@ -10,39 +10,44 @@ const aboutLeft = document.querySelector(".about__left");
 const logo = document.querySelector(".logo");
 const logoSecond = document.querySelector(".logo--second");
 
-logo.addEventListener("ready", () => {
-	console.log("ready");
-	const logoButton = logo.renderRoot.children[0].querySelector("#__lottie_element_60");
+initAboutButton();
 
-	logoButton.style.opacity = "0";
-	logoButton.style.transition = "opacity 0.3s ease";
+function initAboutButton () {
+  const logoButton = logo.renderRoot.children[0].querySelector("#__lottie_element_60");
+  if (!logoButton) {
+    setTimeout(initAboutButton, 1000)
+    return;
+  }
 
-	if (window.innerWidth > 1050) {
-		window.addEventListener("scroll", () => {
-			if (
-				aboutButton.offsetTop > 0 &&
-				aboutButton.offsetTop < aboutLeft.scrollHeight - aboutButton.scrollHeight - 1
-			) {
-				aboutButton.style.opacity = "1";
-				aboutButton.style.pointerEvents = "auto";
-				logoButton.style.opacity = "1";
-			} else {
-				aboutButton.style.opacity = "0";
-				aboutButton.style.pointerEvents = "none";
-				logoButton.style.opacity = "0";
-			}
-		});
-	}
-});
+  logoButton.style.opacity = "0";
+  logoButton.style.transition = "opacity 0.3s ease";
+
+  if (window.innerWidth > 1050) {
+    window.addEventListener("scroll", () => {
+      if (
+        aboutButton.offsetTop > 0 &&
+        aboutButton.offsetTop < aboutLeft.scrollHeight - aboutButton.scrollHeight - 1
+      ) {
+        aboutButton.style.opacity = "1";
+        aboutButton.style.pointerEvents = "auto";
+        logoButton.style.opacity = "1";
+      } else {
+        aboutButton.style.opacity = "0";
+        aboutButton.style.pointerEvents = "none";
+        logoButton.style.opacity = "0";
+      }
+    });
+  }
+}
 
 
 
 if (window.innerWidth <= 1050) {
-		
+
 	logoSecond.addEventListener("ready", () => {
 		console.log("ready");
 		const logoButtonSecond = logoSecond.renderRoot.children[0].querySelector("#__lottie_element_115");
-	
+
 		logoButtonSecond.style.opacity = "0";
 		logoButtonSecond.style.transition = "opacity 0.3s ease";
 
