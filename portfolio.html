@@ -1,285 +1,370 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="./images/favicon.jpg" />
+    <title>Portfolio</title>
+  </head>
 
-<head>
-	<meta charset="UTF-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<link rel="stylesheet" href="./styles/main.css" />
-	<link rel="preconnect" href="https://fonts.googleapis.com" />
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
-		rel="stylesheet" />
-	<link rel="shortcut icon" href="./images/favicon.jpg" />
-	<title>Portfolio</title>
-</head>
+  <body>
+    <div class="page-change"></div>
+    <div class="cursor-block">
+      <div class="cursor-drag hidden">
+        <div class="cursor-drag__circle">
+          <img
+            class="cursor-drag__arrow-left"
+            src="./images/arrow.svg"
+            alt="arrow"
+          />
+          <div class="cursor-drag__dot"></div>
+          <img
+            class="cursor-drag__arrow-right"
+            src="./images/arrow.svg"
+            alt="arrow"
+          />
+        </div>
+      </div>
+      <div class="cursor hidden">
+        <img class="cursor__circle" src="./images/cursor-circle.svg" alt="" />
+        <img class="cursor__image" src="./images/arrow.svg" alt="" />
+      </div>
+    </div>
+    <header class="navbar-block">
+      <div class="container">
+        <div class="navbar">
+          <a class="navbar__logo" href="./index.html">
+            <p class="navbar__logo-top">Crystal Coast</p>
+            <p class="navbar__logo-bottom">technologies</p>
+          </a>
+          <div class="navbar__menu-button">
+            <div class="navbar__menu">
+              <div class="navbar__menu-l-top"></div>
+              <div class="navbar__menu-l-center"></div>
+              <div class="navbar__menu-l-bottom"></div>
+            </div>
+          </div>
+          <ul class="navbar__list hidden">
+            <li class="navbar__list-item hidden">
+              <a class="navbar__list-link" href="#">About us</a>
+            </li>
+            <li class="navbar__list-item hidden">
+              <a class="navbar__list-link" href="./portfolio.html">Portfolio</a>
+            </li>
+            <li class="navbar__list-item hidden">
+              <a class="navbar__list-link" href="#">Blog</a>
+            </li>
+            <li class="navbar__list-item hidden">
+              <a class="navbar__list-link" href="#">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <section class="section section-pp--hero">
+      <div class="pp-hero">
+        <div class="bg-gradient"></div>
+        <div class="container">
+          <div class="pp-hero__content">
+            <a class="button button--back" href="./index.html">
+              <div class="button__arrow-block">
+                <div class="button__circle"></div>
+                <img
+                  class="button__arrow"
+                  src="./images/arrow-back.svg"
+                  alt="arrow"
+                />
+              </div>
+              <p class="button__text">Back</p>
+            </a>
+            <h2 class="h2 h2-pp-hero">Portfolio</h2>
+            <h1 class="h1 h1-pp">DJ BUILDING MAINTENANCE, LLC.</h1>
+            <a class="button" href="#">
+              <div class="button__arrow-block">
+                <div class="button__circle"></div>
+                <img
+                  class="button__arrow"
+                  src="./images/arrow.svg"
+                  alt="arrow"
+                />
+              </div>
+              <p class="button__text">Visit Website</p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section section-pp--about">
+      <div class="container">
+        <div class="pp-about">
+          <img
+            class="pp-about__image"
+            src="./images/pp-about-image.jpg"
+            alt="project-image"
+          />
+          <div class="pp-about__right">
+            <h2 class="h2 h2-pp-about">About Project</h2>
+            <h3 class="h3 h3-pp-about">DJ BUILDING MAINTENANCE, LLC.</h3>
+            <p class="pp-about__subtitle">What Dana Wanted</p>
+            <p class="pp-about__text">
+              A classic looking, modern, responsive website to showcase her
+              Father’s high-quality work. The website also had to display
+              correctly on desktop browsers as well as smartphones and tablets.
+            </p>
+            <p class="pp-about__subtitle">What We Did</p>
+            <p class="pp-about__text">
+              We went with a minimalist type of design using only a few colors.
+              We wanted the fantastic pictures of her father’s work to take
+              center stage and be what the visitor noticed.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="blur-wrapper pp-blur-wrapper">
+      <section class="section section-pp--swiper">
+        <div class="pp__swiper">
+          <div class="pp__swiper-container swiper-container">
+            <div class="swiper-gradient-left--pp"></div>
+            <div class="swiper-gradient-right--pp"></div>
+            <div class="pp__swiper-wrapper swiper-wrapper">
+              <div class="pp__swiper-slide swiper-slide">
+                <a class="pp__card cc-block" href="#">
+                  <img
+                    class="pp__card-image"
+                    src="./images/pp-slider-image.jpg"
+                    alt="blog-post-image"
+                  />
+                </a>
+              </div>
+              <div class="pp__swiper-slide swiper-slide">
+                <a class="pp__card cc-block" href="#">
+                  <img
+                    class="pp__card-image"
+                    src="./images/blog-image-1.jpg"
+                    alt="blog-post-image"
+                  />
+                </a>
+              </div>
+              <div class="pp__swiper-slide swiper-slide">
+                <a class="pp__card cc-block" href="#">
+                  <img
+                    class="pp__card-image"
+                    src="./images/blog-image-2.jpg"
+                    alt="blog-post-image"
+                  />
+                </a>
+              </div>
+              <div class="pp__swiper-slide swiper-slide">
+                <a class="pp__card cc-block" href="#">
+                  <img
+                    class="pp__card-image"
+                    src="./images/pp-slider-image.jpg"
+                    alt="blog-post-image"
+                  />
+                </a>
+              </div>
+            </div>
 
-<body>
-	<div class="cursor-block">
-		<div class="cursor-drag hidden">
-			<div class="cursor-drag__circle">
-				<img class="cursor-drag__arrow-left" src="./images/arrow.svg" alt="arrow" />
-				<div class="cursor-drag__dot"></div>
-				<img class="cursor-drag__arrow-right" src="./images/arrow.svg" alt="arrow" />
-			</div>
-		</div>
-		<div class="cursor hidden">
-			<img class="cursor__circle" src="./images/cursor-circle.svg" alt="" />
-			<img class="cursor__image" src="./images/arrow.svg" alt="" />
-		</div>
-	</div>
-	<div class="preloader">
-		<div class="container">
-			<lottie-player class="preloader__lottie" src="./images/preloader.json" renderer="svg" mode="normal">
-			</lottie-player>
-		</div>
-	</div>
-	<header class="navbar-block">
-		<div class="container">
-			<div class="navbar">
-				<div class="navbar__logo">
-					<p class="navbar__logo-top">Crystal Coast</p>
-					<p class="navbar__logo-bottom">technologies</p>
-				</div>
-				<div class="navbar__menu-button">
-					<div class="navbar__menu">
-						<div class="navbar__menu-l-top"></div>
-						<div class="navbar__menu-l-center"></div>
-						<div class="navbar__menu-l-bottom"></div>
-					</div>
-				</div>
-				<ul class="navbar__list hidden">
-					<li class="navbar__list-item hidden">
-						<a class="navbar__list-link" href="#">About us</a>
-					</li>
-					<li class="navbar__list-item hidden">
-						<a class="navbar__list-link" href="#">Portfolio</a>
-					</li>
-					<li class="navbar__list-item hidden">
-						<a class="navbar__list-link" href="#">Blog</a>
-					</li>
-					<li class="navbar__list-item hidden">
-						<a class="navbar__list-link" href="#">Contact</a>
-					</li>
-				</ul>
-			</div>
-		</div>
-	</header>
-	<section class="section section-pp--hero">
-		<div class="pp-hero">
-			<div class="bg-gradient"></div>
-			<div class="container">
-				<div class="pp-hero__content">
-					<a class="button button--back" href="#">
-						<div class="button__arrow-block">
-							<div class="button__circle"></div>
-							<img class="button__arrow" src="./images/arrow-back.svg" alt="arrow" />
-						</div>
-						<p class="button__text">Back</p>
-					</a>
-					<h2 class="h2 h2-pp-hero">Portfolio</h2>
-					<h1 class="h1 h1-pp">DJ BUILDING MAINTENANCE, LLC.</h1>
-					<a class="button" href="#">
-						<div class="button__arrow-block">
-							<div class="button__circle"></div>
-							<img class="button__arrow" src="./images/arrow.svg" alt="arrow" />
-						</div>
-						<p class="button__text">Visit Website</p>
-					</a>
-				</div>
-			</div>
-		</div>
-	</section>
-	<section class="section section-pp--about">
-		<div class="container">
-			<div class="pp-about">
-				<img class="pp-about__image" src="./images/pp-about-image.jpg" alt="project-image">
-				<div class="pp-about__right">
-					<h2 class="h2 h2-pp-about">About Project</h2>
-					<h3 class="h3 h3-pp-about">DJ BUILDING MAINTENANCE, LLC.</h3>
-					<p class="pp-about__subtitle">What Dana Wanted</p>
-					<p class="pp-about__text">A classic looking, modern, responsive website to showcase her Father’s high-quality
-						work. The website also had to display correctly on desktop browsers as well as smartphones and tablets.</p>
-					<p class="pp-about__subtitle">What We Did</p>
-					<p class="pp-about__text">We went with a minimalist type of design using only a few colors. We wanted the
-						fantastic pictures of her father’s work to take center stage and be what the visitor noticed.</p>
-				</div>
-			</div>
-		</div>
-	</section>
-	<div class="blur-wrapper pp-blur-wrapper">
-		<section class="section section-pp--swiper">
-			<div class="pp__swiper">
-				<div class="pp__swiper-container swiper-container">
-					<div class="swiper-gradient-left--pp"></div>
-					<div class="swiper-gradient-right--pp"></div>
-					<div class="pp__swiper-wrapper swiper-wrapper">
-						<div class="pp__swiper-slide swiper-slide">
-							<a class="pp__card cc-block" href="#">
-								<img class="pp__card-image" src="./images/pp-slider-image.jpg" alt="blog-post-image">
-							</a>
-						</div>
-						<div class="pp__swiper-slide swiper-slide">
-							<a class="pp__card cc-block" href="#">
-								<img class="pp__card-image" src="./images/blog-image-1.jpg" alt="blog-post-image">
-							</a>
-						</div>
-						<div class="pp__swiper-slide swiper-slide">
-							<a class="pp__card cc-block" href="#">
-								<img class="pp__card-image" src="./images/blog-image-2.jpg" alt="blog-post-image">
-							</a>
-						</div>
-						<div class="pp__swiper-slide swiper-slide">
-							<a class="pp__card cc-block" href="#">
-								<img class="pp__card-image" src="./images/pp-slider-image.jpg" alt="blog-post-image">
-							</a>
-						</div>
-					</div>
+            <div class="pp__swiper-pagination swiper-pagination"></div>
+          </div>
+          <div class="pp__swiper-button-wrapper">
+            <a class="button" href="#">
+              <div class="button__arrow-block">
+                <div class="button__circle"></div>
+                <img
+                  class="button__arrow"
+                  src="./images/arrow.svg"
+                  alt="arrow"
+                />
+              </div>
+              <p class="button__text">Visit Website</p>
+            </a>
+          </div>
+        </div>
+      </section>
+    </div>
+    <section class="section section-pp--thinks">
+      <div class="container">
+        <div class="pp-thinks">
+          <h2 class="h2 h2-pp-thinks">What She Thinks</h2>
+          <p class="pp-thinks__text">
+            “I have worked with Anthony consistently for over 4 years on various
+            projects and each time the end result has gone above and beyond my
+            expectations. His great attitude, patience and attention to detail
+            is exactly what a small business owner such as myself needs. I will
+            continue to use Crystal Coast Technologies for all my technology
+            needs.”
+          </p>
+          <p class="pp-thinks__name">Dana Oswald</p>
+        </div>
+      </div>
+    </section>
+    <section class="section section--quote">
+      <div class="quote">
+        <div class="bg-gradient"></div>
+        <div class="container">
+          <div class="quote__content">
+            <div class="quote__left">
+              <h2 class="h2 h2--quote">Get My Free Quote</h2>
+              <h3 class="h3 h3--quote">
+                you need a&nbspwebsite?<br />we can help
+              </h3>
+              <div class="quote__link-block">
+                <p class="quote__link-text">
+                  Call or fill out the form and tell us your ideas
+                </p>
+                <a class="button button--quote" href="tel:910-358-7498">
+                  <div class="button__arrow-block">
+                    <div class="button__circle"></div>
+                    <img
+                      class="button__arrow"
+                      src="./images/arrow.svg"
+                      alt="arrow"
+                    />
+                  </div>
+                  <p class="button__text">Click To Call</p>
+                </a>
+              </div>
+            </div>
+            <div class="quote__right">
+              <form class="quote__form" action="#">
+                <h4 class="h4 h4--quote">order a project</h4>
+                <label class="quote__form-label">
+                  <input
+                    class="quote__form-input"
+                    type="text"
+                    name="name"
+                    placeholder="Name"
+                    required
+                  />
+                </label>
+                <label class="quote__form-label">
+                  <input
+                    class="quote__form-input"
+                    type="email"
+                    name="email"
+                    placeholder="Email"
+                    required
+                  />
+                </label>
+                <label class="quote__form-label">
+                  <input
+                    class="quote__form-input"
+                    type="tel"
+                    name="phone"
+                    placeholder="Phone"
+                    required
+                  />
+                </label>
+                <label class="quote__form-label">
+                  <textarea
+                    class="quote__form-textarea"
+                    placeholder="Comments"
+                  ></textarea>
+                </label>
+                <a class="button" type="submit" href="#">
+                  <div class="button__arrow-block">
+                    <div class="button__circle"></div>
+                    <img
+                      class="button__arrow"
+                      src="./images/arrow.svg"
+                      alt="arrow"
+                    />
+                  </div>
+                  <p class="button__text">Submit</p>
+                </a>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__content">
+          <ul class="footer__nav">
+            <li class="footer__nav-link-wrapper">
+              <a class="footer__nav-link" href="./index.html">
+                <p class="footer__nav-link-count">01</p>
+                <p class="footer__nav-link-name">Home</p>
+              </a>
+            </li>
+            <li class="footer__nav-link-wrapper">
+              <a class="footer__nav-link" href="#">
+                <p class="footer__nav-link-count">02</p>
+                <p class="footer__nav-link-name">About us</p>
+              </a>
+            </li>
+            <li class="footer__nav-link-wrapper">
+              <a class="footer__nav-link" href="./portfolio.html">
+                <p class="footer__nav-link-count">03</p>
+                <p class="footer__nav-link-name">Portfolio</p>
+              </a>
+            </li>
+            <li class="footer__nav-link-wrapper">
+              <a class="footer__nav-link" href="#">
+                <p class="footer__nav-link-count">04</p>
+                <p class="footer__nav-link-name">CCT Services</p>
+              </a>
+            </li>
+            <li class="footer__nav-link-wrapper">
+              <a class="footer__nav-link" href="#">
+                <p class="footer__nav-link-count">05</p>
+                <p class="footer__nav-link-name">Blog</p>
+              </a>
+            </li>
+            <li class="footer__nav-link-wrapper">
+              <a class="footer__nav-link" href="#">
+                <p class="footer__nav-link-count">06</p>
+                <p class="footer__nav-link-name">Contact</p>
+              </a>
+            </li>
+          </ul>
+          <div class="footer__contacts">
+            <p class="footer__contacts-text">
+              PO Box 395, Swansboro, NC&nbsp28584,&nbspUSA
+            </p>
+            <a class="footer__contacts-link" href="tel:910-358-7498"
+              >910-358-7498</a
+            >
+            <a class="footer__contacts-link" href="mailto:info@cct.com"
+              >info@cct.com</a
+            >
+          </div>
+          <p class="footer__copyright">
+            © Crystal Coast Technologies, Inc. 2005-2021
+          </p>
+          <div class="footer__social-links">
+            <a class="footer__social-link" href="#">Behance</a>
+            <a class="footer__social-link" href="#">Instagram</a>
+          </div>
+        </div>
+      </div>
+    </footer>
 
-					<div class="pp__swiper-pagination swiper-pagination"></div>
-				</div>
-				<div class="pp__swiper-button-wrapper">
-					<a class="button" href="#">
-						<div class="button__arrow-block">
-							<div class="button__circle"></div>
-							<img class="button__arrow" src="./images/arrow.svg" alt="arrow" />
-						</div>
-						<p class="button__text">Visit Website</p>
-					</a>
-				</div>
-			</div>
-		</section>
-	</div>
-	<section class="section section-pp--thinks">
-		<div class="container">
-			<div class="pp-thinks">
-				<h2 class="h2 h2-pp-thinks">What She Thinks</h2>
-				<p class="pp-thinks__text">“I have worked with Anthony consistently for over 4 years on various projects and
-					each time the end result has gone above and beyond my expectations. His great attitude, patience and attention
-					to detail is exactly what a small business owner such as myself needs. I will continue to use Crystal Coast
-					Technologies for all my technology needs.”</p>
-				<p class="pp-thinks__name">Dana Oswald</p>
-			</div>
-		</div>
-	</section>
-	<section class="section section--quote">
-		<div class="quote">
-			<div class="bg-gradient"></div>
-			<div class="container">
-				<div class="quote__content">
-					<div class="quote__left">
-						<h2 class="h2 h2--quote">Get My Free Quote</h2>
-						<h3 class="h3 h3--quote">
-							you need a&nbspwebsite?<br />we can help
-						</h3>
-						<div class="quote__link-block">
-							<p class="quote__link-text">Call or fill out the form and tell us your ideas</p>
-							<a class="button button--quote" href="tel:910-358-7498">
-								<div class="button__arrow-block">
-									<div class="button__circle"></div>
-									<img class="button__arrow" src="./images/arrow.svg" alt="arrow" />
-								</div>
-								<p class="button__text">Click To Call</p>
-							</a>
-						</div>
-					</div>
-					<div class="quote__right">
-						<form class="quote__form" action="#">
-							<h4 class="h4 h4--quote">order a project</h4>
-							<label class="quote__form-label">
-								<input class="quote__form-input" type="text" name="name" placeholder="Name" required />
-							</label>
-							<label class="quote__form-label">
-								<input class="quote__form-input" type="email" name="email" placeholder="Email" required />
-							</label>
-							<label class="quote__form-label">
-								<input class="quote__form-input" type="tel" name="phone" placeholder="Phone" required />
-							</label>
-							<label class="quote__form-label">
-								<textarea class="quote__form-textarea" placeholder="Comments"></textarea>
-							</label>
-							<a class="button" type="submit" href="#">
-								<div class="button__arrow-block">
-									<div class="button__circle"></div>
-									<img class="button__arrow" src="./images/arrow.svg" alt="arrow" />
-								</div>
-								<p class="button__text">Submit</p>
-							</a>
-						</form>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<footer class="footer">
-		<div class="container">
-			<div class="footer__content">
-				<ul class="footer__nav">
-					<li class="footer__nav-link-wrapper">
-						<a class="footer__nav-link" href="#">
-							<p class="footer__nav-link-count">01</p>
-							<p class="footer__nav-link-name">Home</p>
-						</a>
-					</li>
-					<li class="footer__nav-link-wrapper">
-						<a class="footer__nav-link" href="#">
-							<p class="footer__nav-link-count">02</p>
-							<p class="footer__nav-link-name">About us</p>
-						</a>
-					</li>
-					<li class="footer__nav-link-wrapper">
-						<a class="footer__nav-link" href="#">
-							<p class="footer__nav-link-count">03</p>
-							<p class="footer__nav-link-name">Portfolio</p>
-						</a>
-					</li>
-					<li class="footer__nav-link-wrapper">
-						<a class="footer__nav-link" href="#">
-							<p class="footer__nav-link-count">04</p>
-							<p class="footer__nav-link-name">CCT Services</p>
-						</a>
-					</li>
-					<li class="footer__nav-link-wrapper">
-						<a class="footer__nav-link" href="#">
-							<p class="footer__nav-link-count">05</p>
-							<p class="footer__nav-link-name">Blog</p>
-						</a>
-					</li>
-					<li class="footer__nav-link-wrapper">
-						<a class="footer__nav-link" href="#">
-							<p class="footer__nav-link-count">06</p>
-							<p class="footer__nav-link-name">Contact</p>
-						</a>
-					</li>
-				</ul>
-				<div class="footer__contacts">
-					<p class="footer__contacts-text">
-						PO Box 395, Swansboro, NC&nbsp28584,&nbspUSA
-					</p>
-					<a class="footer__contacts-link" href="tel:910-358-7498">910-358-7498</a>
-					<a class="footer__contacts-link" href="mailto:info@cct.com">info@cct.com</a>
-				</div>
-				<p class="footer__copyright">
-					© Crystal Coast Technologies, Inc. 2005-2021
-				</p>
-				<div class="footer__social-links">
-					<a class="footer__social-link" href="#">Behance</a>
-					<a class="footer__social-link" href="#">Instagram</a>
-				</div>
-			</div>
-		</div>
-	</footer>
-
-
-	<script defer src="https://unpkg.com/@lottiefiles/lottie-player@0.4.0/dist/tgs-player.js"></script>
-	<script defer src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-	<script defer src="./scripts/ppSwiper.js"></script>
-	<script defer src="./scripts/navbar.js"></script>
-	<script defer src="./scripts/button.js"></script>
-	<script defer src="./scripts/cursor.js"></script>
-	<script defer src="./scripts/textareaHeight.js"></script>
-	<script defer src="./scripts/preloader.js"></script>
-</body>
-
+    <script
+      defer
+      src="https://unpkg.com/@lottiefiles/lottie-player@0.4.0/dist/tgs-player.js"
+    ></script>
+    <script defer src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script defer src="./scripts/ppSwiper.js"></script>
+    <script defer src="./scripts/navbar.js"></script>
+    <script defer src="./scripts/button.js"></script>
+    <script defer src="./scripts/cursor.js"></script>
+    <script defer src="./scripts/textareaHeight.js"></script>
+    <script defer src="./scripts/pageChange.js"></script>
+  </body>
 </html>
