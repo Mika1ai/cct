@@ -1,19 +1,21 @@
-"use strict"
+"use strict";
 
 const preloaderWrapper = document.querySelector(".preloader");
 const preloader = document.querySelector(".preloader__lottie");
 
-preloader.addEventListener("ready", () => {
-	preloader.play();
-});
+preloaderReady();
 
-window.addEventListener("load", () => {
-	setTimeout(() => {
-		preloaderWrapper.style.opacity = "0";
-		preloaderWrapper.style.pointerEvents = "none";
-
-		setTimeout(() => {
-			preloaderWrapper.remove();
-		}, 1500)
-	}, 4000)
-});
+function preloaderReady() {
+  const preloaderInner = preloader.renderRoot.children[0].querySelector(
+    "#__lottie_element_4"
+  );
+  if (!preloaderInner) {
+    setTimeout(preloaderReady, 200);
+    return;
+  }
+  preloader.play();
+  setTimeout(() => {
+    preloaderWrapper.style.opacity = "0";
+    preloaderWrapper.style.pointerEvents = "none";
+  }, 4000);
+}
